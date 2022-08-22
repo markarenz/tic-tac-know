@@ -5,3 +5,4 @@ export { default as Thinking } from './Thinking';
 export { default as GameStart } from './GameStart';
 export { default as Header } from './Header';
 export { default as Bg } from './Bg';
+export { default as GameOver } from './GameOver';

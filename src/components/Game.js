@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Header, Board, Thinking, GameStart } from '../components';
-import { X, PLAYER, CPU, initGameState } from '../constants';
+import React, { useState, useEffect, useRef } from 'react';
+import { Header, Board, Thinking, GameStart, GameOver } from '../components';
+import { X, PLAYER, CPU, AI_LEVEL_RND } from '../constants';
 import {
   sleep,
   processTurn,
@@ -11,42 +11,60 @@ import {
   saveWinsLosses,
   readWinsLosses,
 } from '../helpers/gameLogic';
+import PropTypes from 'prop-types';
 
-const Game = () => {
-  const [gameState, setGameState] = useState(initGameState);
+const Game = ({ aiLevel }) => {
+  const [gameStatus, setGameStatus] = useState('start');
+  const [gameBoard, setGameBoard] = useState({});
+  const [turnHistory, setTurnHistory] = useState([]);
+  const [whoseTurn, setWhoseTurn] = useState(null);
+  const [sideLabels, setSideLabels] = useState({});
+  const [gameResult, setGameResult] = useState(null);
   const [isCpuThinking, setIsCpuThinking] = useState(false);
   const [winsLosses, setWinsLosses] = useState({ wins: 0, losses: 0, draws: 0 });
 
   const initGame = (resetting) => {
-    setGameState({
-      ...initGameState,
-      initted: false,
-      reset: resetting,
-      sideLabels: getSideLabels(X),
-      whoseTurn: PLAYER,
-    });
+    setGameStatus('start');
+    setGameBoard({});
+    setTurnHistory([]);
+    setSideLabels(getSideLabels(X));
+    setWhoseTurn(null);
     setIsCpuThinking(false);
+    setGameResult(null);
   };
 
   const handlePlayerSelectCell = (i) => {
-    if (gameState.gameStatus === 'playing') {
-      setGameState({ ...processTurn(i, gameState) });
+    if (gameStatus === 'playing') {
+      processTurn({ i, gameBoard, whoseTurn, setGameBoard, setTurnHistory });
     }
   };
 
-  // When the board updates, check for game-end conditions
+  // WHEN THE BOARD UPDATES, CHECK FOR GAME-END CONDITIONS
   useEffect(() => {
-    // Ignore if the game is resetting
-    if (gameState.gameStatus === 'start') {
-      return;
+    const result = checkWinner(gameBoard);
+    setWhoseTurn((prevWhoseTurn) => (prevWhoseTurn === PLAYER ? CPU : PLAYER));
+    if (result) {
+      setTurnHistory((prevTurnHistory) => [...prevTurnHistory, result]);
+      setGameStatus('gameOver');
+      setGameResult(result);
     }
-    const result = checkWinner(gameState.gameBoard);
-    if (result?.side) {
+  }, [gameBoard]);
+
+  // ON GAME OVER, STORE TURNHISTORY IN LOCALSTORAGE FOR LATER ANALYSIS
+  useEffect(() => {
+    if (gameStatus === 'gameOver') {
+      storeGameResults(turnHistory);
+    }
+  }, [gameStatus, turnHistory]);
+
+  // ON GAMEOVER, UPDATE WIN/LOSS RECORD IN LOCALSTORAGE
+  useEffect(() => {
+    if (gameResult?.side) {
       setWinsLosses((prevWinsLosses) => {
         let { wins, losses, draws } = prevWinsLosses;
-        if (result.side === PLAYER) {
+        if (gameResult.side === PLAYER) {
           wins += 1;
-        } else if (result.side === CPU) {
+        } else if (gameResult.side === CPU) {
           losses += 1;
         } else {
           draws += 1;
@@ -59,40 +77,37 @@ const Game = () => {
         };
       });
     }
-    setGameState((prevGameState) => {
-      let nextTurn = prevGameState.whoseTurn === PLAYER ? CPU : PLAYER;
-      return {
-        ...prevGameState,
-        reset: false,
-        whoseTurn: nextTurn,
-        turnHistory: result ? [...prevGameState.turnHistory, result] : prevGameState.turnHistory,
-        gameStatus: result ? 'gameOver' : 'playing',
-      };
-    });
-    //eslint-disable-next-line
-  }, [gameState.gameBoard]);
+  }, [gameResult]);
 
+  // WE USE A REF TO TRACK THE PREVIOUS VALUE FOR WHOSETURN
+  const prevWhoseTurn = useRef();
+
+  // ON WHOSETURN CHANGE, CONDITIONALLY TRIGGER CPU TURN
   useEffect(() => {
-    if (gameState.gameStatus === 'gameOver') {
-      storeGameResults(gameState.turnHistory);
+    const handleTriggerCpuTurn = async () => {
+      if (gameStatus === 'playing') {
+        await sleep(1000);
+        await processCpuTurn({
+          gameBoard,
+          whoseTurn,
+          aiLevel,
+          setGameBoard,
+          setTurnHistory,
+          setIsCpuThinking,
+        });
+      }
+    };
+    // TO RECTIFY THE USE OF GAMEBOARD IN THE DEPS FOR THIS USEEFFECT
+    // WE CONFIRM THAT THE WHOSETURN VALUE HAS CHANGED FIRST
+    if (prevWhoseTurn.current !== whoseTurn) {
+      prevWhoseTurn.current = whoseTurn;
+      if (whoseTurn === CPU) {
+        handleTriggerCpuTurn();
+      }
     }
-  }, [gameState.gameStatus, gameState.turnHistory]);
+  }, [whoseTurn, aiLevel, gameStatus, gameBoard]);
 
-  const handleTriggerCpuTurn = async () => {
-    if (gameState.gameStatus === 'playing') {
-      await sleep(1000);
-      const newGameState = await processCpuTurn(gameState, setIsCpuThinking);
-      setGameState({ ...newGameState });
-    }
-  };
-
-  useEffect(() => {
-    if (gameState.whoseTurn === CPU) {
-      handleTriggerCpuTurn();
-    }
-    //eslint-disable-next-line
-  }, [gameState.whoseTurn]);
-
+  // INITIALIZE COMPONENT
   useEffect(() => {
     initGame(false);
     readWinsLosses(setWinsLosses);
@@ -101,31 +116,54 @@ const Game = () => {
   const handlePlayAgain = () => {
     initGame(true);
   };
-  // const showGameOver = gameState.gameStatus === 'gameOver';
-  const showGameStart = gameState.gameStatus === 'start';
+
+  const showGameStart = gameStatus === 'start';
+
   const handleStartClick = (whoseTurn) => {
-    setGameState({
-      ...gameState,
-      whoseTurn,
-      gameStatus: 'playing',
+    setWhoseTurn(whoseTurn);
+    setGameStatus('playing');
+  };
+  const handleGoToMenu = () => {
+    console.log('go to menu');
+  };
+  const gameState = { whoseTurn, sideLabels, gameBoard, gameStatus, turnHistory };
+  const handleTestReset = () => {
+    setGameResult({
+      side: 'cpu',
+      winningPattern: 1,
     });
   };
   return (
-    <div className="relative">
-      <Header gameStatus={gameState.gameStatus} handlePlayAgain={handlePlayAgain} />
+    <div className="relative h-full">
+      <Header
+        gameStatus={gameStatus}
+        handlePlayAgain={handlePlayAgain}
+        handleTestReset={handleTestReset}
+      />
       <Board
         gameState={gameState}
         handlePlayerSelectCell={handlePlayerSelectCell}
         winsLosses={winsLosses}
       />
 
-      <Thinking isCpuThinking={isCpuThinking} aiLevel={gameState.aiLevel} />
+      <Thinking isCpuThinking={isCpuThinking} aiLevel={aiLevel} />
 
       <GameStart show={showGameStart} handleStartClick={handleStartClick} />
 
-      {/* Game over Modal VICTORY/DEFEAT - REPLAY / MENU */}
+      <GameOver
+        gameResult={gameResult}
+        handlePlayAgain={handlePlayAgain}
+        handleGoToMenu={handleGoToMenu}
+      />
     </div>
   );
 };
 
+Game.defaultProps = {
+  aiLevel: AI_LEVEL_RND,
+};
+
+Game.propTypes = {
+  aiLevel: PropTypes.string.isRequired,
+};
 export default Game;

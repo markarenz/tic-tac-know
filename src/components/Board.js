@@ -6,12 +6,16 @@ import PropTypes from 'prop-types';
 
 const Board = ({ handlePlayerSelectCell, gameState, winsLosses }) => {
   const { whoseTurn, sideLabels, gameBoard, gameStatus, turnHistory } = gameState;
+  // if (!whoseTurn) {
+  //   return <div className="w-full h-screen">&nbsp;</div>;
+  // }
   const result = gameStatus === 'gameOver' ? turnHistory[turnHistory.length - 1] : null;
   return (
     <div className="max-w-sm mx-auto my-4 bg-white rounded-lg p-4">
       <div className="mb-4">
         <div className="grid grid-cols-2">
           <div className="overflow-hidden">
+            {whoseTurn === '' && <div> &nbsp;</div>}
             <Transition
               as="div"
               show={whoseTurn === PLAYER}
@@ -68,10 +72,15 @@ const Board = ({ handlePlayerSelectCell, gameState, winsLosses }) => {
   );
 };
 
+Board.defaultProps = {
+  gameState: {
+    whoseTurn: '',
+  },
+};
 Board.propTypes = {
   gameState: PropTypes.shape({
     gameBoard: PropTypes.objectOf(PropTypes.string).isRequired,
-    whoseTurn: PropTypes.string.isRequired,
+    whoseTurn: PropTypes.string,
     sideLabels: PropTypes.objectOf(PropTypes.string).isRequired,
   }),
   handlePlayerSelectCell: PropTypes.func.isRequired,

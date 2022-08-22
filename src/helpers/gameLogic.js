@@ -8,8 +8,7 @@ import {
   initOpenCells,
   winningPatterns,
   AI_LEVEL_RND,
-  LOCAL_STORAGE_KEY,
-  WINS_LOSSES_KEY,
+  LOCAL_STORAGE_KEYS,
 } from '../constants';
 
 const sleep = (milliseconds) => {
@@ -81,31 +80,28 @@ const cpuSelectMove = async (gameBoard, aiLevel) => {
   return i;
 };
 
-const processTurn = (i, gameState) => {
-  const newGameBoard = {
-    ...gameState.gameBoard,
-    [i]: gameState.whoseTurn,
-  };
-  return {
-    ...gameState,
-    gameBoard: newGameBoard,
-    turnHistory: [
-      ...gameState.turnHistory,
-      {
-        i,
-        whoseTurn: gameState.whoseTurn,
-      },
-    ],
-  };
+const processTurn = (args) => {
+  const { i, gameBoard, whoseTurn, setGameBoard, setTurnHistory } = args;
+  setTurnHistory((prevTurnHistory) => [
+    ...prevTurnHistory,
+    {
+      i,
+      whoseTurn,
+    },
+  ]);
+  return setGameBoard({
+    ...gameBoard,
+    [i]: whoseTurn,
+  });
 };
 
-const processCpuTurn = async (gameState, setIsCpuThinking) => {
+const processCpuTurn = async (args) => {
+  const { gameBoard, whoseTurn, aiLevel, setGameBoard, setTurnHistory, setIsCpuThinking } = args;
   setIsCpuThinking(true);
   // select spot based on aiLevel with fakeWait
-  const i = await cpuSelectMove(gameState.gameBoard, gameState.aiLevel);
+  const i = await cpuSelectMove(gameBoard, aiLevel);
   setIsCpuThinking(false);
-  const result = processTurn(i, gameState);
-  return result;
+  return processTurn({ i, gameBoard, whoseTurn, setGameBoard, setTurnHistory });
 };
 
 const getSideLabels = (playerLabel) => {
@@ -116,18 +112,18 @@ const getSideLabels = (playerLabel) => {
 };
 
 const storeGameResults = (turnHistory) => {
-  const legacyHistoryStr = localStorage.getItem(LOCAL_STORAGE_KEY);
+  const legacyHistoryStr = localStorage.getItem(LOCAL_STORAGE_KEYS.HISTORY);
   const legacyHistory = legacyHistoryStr ? JSON.parse(legacyHistoryStr) : [];
   const historyIsNew = !legacyHistory.some((h) => h === turnHistory);
   const newHistory = historyIsNew ? [...legacyHistory, turnHistory] : legacyHistory;
-  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newHistory));
+  localStorage.setItem(LOCAL_STORAGE_KEYS.HISTORY, JSON.stringify(newHistory));
 };
 
 const saveWinsLosses = (winsLosses) => {
-  localStorage.setItem(WINS_LOSSES_KEY, JSON.stringify(winsLosses));
+  localStorage.setItem(LOCAL_STORAGE_KEYS.WINS_LOSSES, JSON.stringify(winsLosses));
 };
 const readWinsLosses = (setWinsLosses) => {
-  const winsLossesStr = localStorage.getItem(WINS_LOSSES_KEY);
+  const winsLossesStr = localStorage.getItem(LOCAL_STORAGE_KEYS.WINS_LOSSES);
   if (winsLossesStr?.length > 1) {
     setWinsLosses(JSON.parse(winsLossesStr));
   }

@@ -5,6 +5,7 @@ import { sides, coinSides } from '../constants';
 import imgHeads from '../img/heads.png';
 import imgTails from '../img/tails.png';
 import PropTypes from 'prop-types';
+
 const GameStart = ({ show, handleStartClick }) => {
   const [isExisting, setIsExiting] = useState(false);
   const [rndIndex, setRndIndex] = useState(null);

@@ -22,21 +22,20 @@ const winningPatterns = [
   [1, 5, 9], // TL-BR DIAG
   [3, 5, 7], // TR-BL DIAG
 ];
-const initGameState = {
-  gameStatus: 'start',
-  gameBoard: {},
-  aiLevel: AI_LEVEL_RND,
-  turnHistory: [],
-  whoseTurn: PLAYER,
-  sideLabels: {},
-};
 
-const LOCAL_STORAGE_KEY = 'tic-tac-know-history';
-const WINS_LOSSES_KEY = 'tic-tac-know-wins-losses';
+const LOCAL_STORAGE_KEYS = {
+  HISTORY: 'tic-tac-know-history',
+  WINS_LOSSES: 'tic-tac-know-wins-losses',
+};
 
 const whoseTurnMessages = {
   player: 'Your turn',
   cpu: 'CPU Turn',
+};
+const gameOverMessages = {
+  player: 'YOU WIN!',
+  cpu: 'CPU WINS',
+  draw: 'The Game is a draw.',
 };
 
 export {
@@ -48,13 +47,12 @@ export {
   X,
   O,
   whoseTurnMessages,
+  gameOverMessages,
   initOpenCells,
   winningPatterns,
   AI_LEVEL_RND,
   AI_LEVEL_KI,
   AI_LEVEL_HAH,
   AI_LEVEL_SMRT,
-  LOCAL_STORAGE_KEY,
-  WINS_LOSSES_KEY,
-  initGameState,
+  LOCAL_STORAGE_KEYS,
 };
