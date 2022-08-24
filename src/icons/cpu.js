@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AI_LEVEL_RND, AI_LEVEL_KI, AI_LEVEL_HAH, AI_LEVEL_SMRT } from '../constants';
+import { AI_LEVELS } from '../constants';
 
 const Cpu = ({ aiLevel }) => {
+  const { AI_LEVEL_RND, AI_LEVEL_KI, AI_LEVEL_HAH, AI_LEVEL_SMRT } = AI_LEVELS;
   const showPpp = aiLevel === AI_LEVEL_RND;
   const showFlatSmile = aiLevel === AI_LEVEL_KI;
   const showSmile = aiLevel === AI_LEVEL_HAH;
@@ -11,13 +12,7 @@ const Cpu = ({ aiLevel }) => {
   const showWink = [AI_LEVEL_KI, AI_LEVEL_SMRT].includes(aiLevel);
   const showBrows = aiLevel === AI_LEVEL_SMRT;
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      // height="auto"
-      width="100%"
-      viewBox="0 0 56.702 45.17"
-      version="1.1"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 56.702 45.17" version="1.1">
       <path
         fill="gray"
         fillOpacity="1"
@@ -136,7 +131,7 @@ const Cpu = ({ aiLevel }) => {
 };
 
 Cpu.defaultProps = {
-  aiLevel: AI_LEVEL_RND,
+  aiLevel: AI_LEVELS.AI_LEVEL_RND,
 };
 
 Cpu.propTypes = {

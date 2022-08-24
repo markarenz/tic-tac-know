@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Header, Board, Thinking, GameStart, GameOver } from '../components';
-import { X, PLAYER, CPU, AI_LEVEL_RND } from '../constants';
+import { Bg, Header, Board, Thinking, GameStart, GameOver } from '../components';
+import { PLAYER, CPU, AI_LEVELS } from '../constants';
 import {
   sleep,
   processTurn,
@@ -13,7 +13,7 @@ import {
 } from '../helpers/gameLogic';
 import PropTypes from 'prop-types';
 
-const Game = ({ aiLevel }) => {
+const Game = ({ aiLevel, goToMenu, playerSide }) => {
   const [gameStatus, setGameStatus] = useState('start');
   const [gameBoard, setGameBoard] = useState({});
   const [turnHistory, setTurnHistory] = useState([]);
@@ -21,13 +21,14 @@ const Game = ({ aiLevel }) => {
   const [sideLabels, setSideLabels] = useState({});
   const [gameResult, setGameResult] = useState(null);
   const [isCpuThinking, setIsCpuThinking] = useState(false);
+  const [isRestarting, setIsRestarting] = useState(false);
   const [winsLosses, setWinsLosses] = useState({ wins: 0, losses: 0, draws: 0 });
 
-  const initGame = (resetting) => {
+  const initGame = (resetting, side) => {
     setGameStatus('start');
     setGameBoard({});
     setTurnHistory([]);
-    setSideLabels(getSideLabels(X));
+    setSideLabels(getSideLabels(side));
     setWhoseTurn(null);
     setIsCpuThinking(false);
     setGameResult(null);
@@ -38,6 +39,12 @@ const Game = ({ aiLevel }) => {
       processTurn({ i, gameBoard, whoseTurn, setGameBoard, setTurnHistory });
     }
   };
+
+  useEffect(() => {
+    if (gameStatus === 'start') {
+      setIsRestarting(false);
+    }
+  }, [gameStatus]);
 
   // WHEN THE BOARD UPDATES, CHECK FOR GAME-END CONDITIONS
   useEffect(() => {
@@ -109,12 +116,15 @@ const Game = ({ aiLevel }) => {
 
   // INITIALIZE COMPONENT
   useEffect(() => {
-    initGame(false);
+    initGame(false, playerSide);
     readWinsLosses(setWinsLosses);
-  }, []);
+  }, [playerSide]);
 
   const handlePlayAgain = () => {
-    initGame(true);
+    setIsRestarting(true);
+    setTimeout(() => {
+      initGame(true, playerSide);
+    }, 750);
   };
 
   const showGameStart = gameStatus === 'start';
@@ -123,47 +133,41 @@ const Game = ({ aiLevel }) => {
     setWhoseTurn(whoseTurn);
     setGameStatus('playing');
   };
-  const handleGoToMenu = () => {
-    console.log('go to menu');
-  };
   const gameState = { whoseTurn, sideLabels, gameBoard, gameStatus, turnHistory };
-  const handleTestReset = () => {
-    setGameResult({
-      side: 'cpu',
-      winningPattern: 1,
-    });
-  };
   return (
-    <div className="relative h-full">
-      <Header
-        gameStatus={gameStatus}
-        handlePlayAgain={handlePlayAgain}
-        handleTestReset={handleTestReset}
-      />
-      <Board
-        gameState={gameState}
-        handlePlayerSelectCell={handlePlayerSelectCell}
-        winsLosses={winsLosses}
-      />
+    <div>
+      <Bg variant="game" />
+      <div className="relative h-full">
+        <Header gameStatus={gameStatus} />
+        <Board
+          gameState={gameState}
+          handlePlayerSelectCell={handlePlayerSelectCell}
+          winsLosses={winsLosses}
+        />
 
-      <Thinking isCpuThinking={isCpuThinking} aiLevel={aiLevel} />
+        <Thinking isCpuThinking={isCpuThinking} aiLevel={aiLevel} />
 
-      <GameStart show={showGameStart} handleStartClick={handleStartClick} />
+        <GameStart show={showGameStart} handleStartClick={handleStartClick} />
 
-      <GameOver
-        gameResult={gameResult}
-        handlePlayAgain={handlePlayAgain}
-        handleGoToMenu={handleGoToMenu}
-      />
+        <GameOver
+          gameResult={gameResult}
+          isRestarting={isRestarting}
+          handlePlayAgain={handlePlayAgain}
+          handleGoToMenu={goToMenu}
+          aiLevel={aiLevel}
+        />
+      </div>
     </div>
   );
 };
 
 Game.defaultProps = {
-  aiLevel: AI_LEVEL_RND,
+  aiLevel: AI_LEVELS.AI_LEVEL_RND,
 };
 
 Game.propTypes = {
+  goToMenu: PropTypes.func.isRequired,
   aiLevel: PropTypes.string.isRequired,
+  playerSide: PropTypes.string.isRequired,
 };
 export default Game;

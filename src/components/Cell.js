@@ -73,7 +73,7 @@ Cell.propTypes = {
   i: PropTypes.number.isRequired,
   value: PropTypes.string,
   handlePlayerSelectCell: PropTypes.func.isRequired,
-  whoseTurn: PropTypes.string.isRequired,
+  whoseTurn: PropTypes.string,
   sideLabels: PropTypes.objectOf(PropTypes.string).isRequired,
   gameStatus: PropTypes.string.isRequired,
   result: PropTypes.shape({}),

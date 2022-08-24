@@ -7,7 +7,7 @@ import {
   CPU,
   initOpenCells,
   winningPatterns,
-  AI_LEVEL_RND,
+  AI_LEVELS,
   LOCAL_STORAGE_KEYS,
 } from '../constants';
 
@@ -71,7 +71,7 @@ const cpuSelectMoveRnd = (gameBoard) => {
 const cpuSelectMove = async (gameBoard, aiLevel) => {
   var i = null;
   switch (aiLevel) {
-    case AI_LEVEL_RND:
+    case AI_LEVELS.AI_LEVEL_RND:
     default:
       i = cpuSelectMoveRnd(gameBoard);
       break;

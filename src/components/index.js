@@ -6,3 +6,6 @@ export { default as GameStart } from './GameStart';
 export { default as Header } from './Header';
 export { default as Bg } from './Bg';
 export { default as GameOver } from './GameOver';
+export { default as Menu } from './Menu';
+export { default as MenuNav } from './MenuNav';
+export { default as TransitionWrap } from './utilities/TransitionWrap';

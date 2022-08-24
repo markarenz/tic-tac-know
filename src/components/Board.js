@@ -1,6 +1,6 @@
 import React from 'react';
 import Cell from './Cell';
-import { Transition } from '@tailwindui/react';
+import { TransitionWrap } from '../components';
 import { initOpenCells, PLAYER, CPU, whoseTurnMessages } from '../constants';
 import PropTypes from 'prop-types';
 
@@ -16,36 +16,18 @@ const Board = ({ handlePlayerSelectCell, gameState, winsLosses }) => {
         <div className="grid grid-cols-2">
           <div className="overflow-hidden">
             {whoseTurn === '' && <div> &nbsp;</div>}
-            <Transition
-              as="div"
-              show={whoseTurn === PLAYER}
-              enter="transition-all duration-500"
-              enterFrom="opacity-0 -translate-x-16"
-              enterTo="opacity-100 translate-x-0"
-              leave="transition-all duration-500"
-              leaveFrom="opacity-100 translate-x-0"
-              leaveTo="opacity-0 -translate-x-16"
-            >
+            <TransitionWrap show={whoseTurn === PLAYER} anim="l2c2l" className="">
               <div className="uppercase">
                 <b>{whoseTurnMessages[PLAYER]}</b>
               </div>
-            </Transition>
+            </TransitionWrap>
           </div>
           <div className="overflow-hidden">
-            <Transition
-              as="div"
-              show={whoseTurn === CPU}
-              enter="transition-all duration-500"
-              enterFrom="opacity-0 translate-x-16"
-              enterTo="opacity-100 translate-x-0"
-              leave="transition-all duration-500"
-              leaveFrom="opacity-100 translate-x-0"
-              leaveTo="opacity-0 translate-x-16"
-            >
+            <TransitionWrap as="div" show={whoseTurn === CPU} anim="r2c2r" className="">
               <div className="text-right uppercase">
                 <b>{whoseTurnMessages[CPU]}</b>
               </div>
-            </Transition>
+            </TransitionWrap>
           </div>
         </div>
       </div>

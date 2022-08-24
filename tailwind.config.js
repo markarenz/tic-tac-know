@@ -27,6 +27,18 @@ module.exports = {
         fadeOnBgCEight: 'fadeOnBgC 0.5s 0.85s ease-in-out forwards',
         fadeOnBgPNine: 'fadeOnBgP 0.5s 0.9s ease-in-out forwards',
         fadeOnBgCNine: 'fadeOnBgC 0.5s 0.9s ease-in-out forwards',
+
+        logoTicA: 'fadeInOut 3.0s 0.25s linear infinite',
+        logoTicB: 'fadeInOut 3.0s 0.5s linear infinite',
+        logoTicC: 'fadeInOut 3.0s 0.75s linear infinite',
+        logoTicD: 'fadeInOut 3.0s 1.0s linear infinite',
+        logoTicE: 'fadeInOut 3.0s 1.25s linear infinite',
+        logoTicF: 'fadeInOut 3.0s 1.5s linear infinite',
+        logoTicG: 'fadeInOut 3.0s 1.75s linear infinite',
+        logoTicH: 'fadeInOut 3.0s 2.0s linear infinite',
+        logoTicI: 'fadeInOut 3.0s 2.25s linear infinite',
+
+        pingSlowSm: 'pingSm 2s cubic-bezier(0, 0, 0.2, 1) infinite',
       },
       keyframes: {
         zoomDown: {
@@ -44,6 +56,18 @@ module.exports = {
         fadeOnBgC: {
           '0%': { backgroundColor: 'rgba(255, 190, 190, 0)' },
           '100%': { backgroundColor: 'rgba(255, 190, 190, 255)' },
+        },
+        fadeInOut: {
+          '0%': { opacity: 0 },
+          '20%': { opacity: 100 },
+          '40%': { opacity: 100 },
+          '60%': { opacity: 0 },
+          '100%': { opacity: 0 },
+        },
+        pingSm: {
+          '0%': { transform: 'scale(1)', opacity: 1.0 },
+          '75%': { transform: 'scale(1.6)', opacity: 0.0 },
+          '100%': { transform: 'scale(1.6)', opacity: 0.0 },
         },
       },
       dropShadow: {
