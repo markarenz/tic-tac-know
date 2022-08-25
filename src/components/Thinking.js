@@ -6,23 +6,19 @@ import PropTypes from 'prop-types';
 
 const Thinking = ({ aiLevel, isCpuThinking }) => {
   return (
-    <TransitionWrap
-      show={isCpuThinking}
-      anim="zoomInOut"
-      // className="absolute left-0 top-0 w-full h-full flex items-center justify-center"
-    >
+    <TransitionWrap show={isCpuThinking} anim="zoomInOut">
       <div className="w-full h-52 w-52 relative">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-800 opacity-50"></span>
         <div className="relative">
           <Cpu aiLevel={aiLevel} isThinking />
           <div className="w-12 absolute top-0 left-0">
             <div className="animate-spinSlow">
-              <Gear />
+              <Gear data-testid="gear-1" />
             </div>
           </div>
           <div className="w-12 absolute bottom-0 right-0">
             <div className="animate-spinSlow">
-              <Gear />
+              <Gear data-testid="gear-2" />
             </div>
           </div>
         </div>

@@ -38,15 +38,23 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "jest-mock-random": "^1.1.1",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
     "tailwindcss": "^3.1.8"
   },
   "jest": {
+    "testMatch": [
+      "!**/__fixtures__/**",
+      "**/__tests__/**/*.spec.[jt]s?(x)"
+    ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
+      "src/**/*.js",
       "!<rootDir>/node_modules/",
-      "!<rootDir>/path/to/dir/"
+      "!<rootDir>/path/to/dir/",
+      "!**/__fixtures__/**",
+      "!**/__tests__/**",
+      "!**/*.test.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -56,6 +64,8 @@
         "statements": 90
       }
     },
-    "coverageReporters": ["text"]    
-  }  
+    "coverageReporters": [
+      "text"
+    ]
+  }
 }

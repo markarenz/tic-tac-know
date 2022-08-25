@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Header = ({ gameStatus }) => {
+const Header = ({}) => {
   return (
     <header className="flex justify-between items-center bg-purple-600/50 px-4 py-4 mb-8 relative z-10">
       <h1 className="text-3xl lg:text-2xl md:text-xl text-center text-white">
@@ -21,7 +20,4 @@ const Header = ({ gameStatus }) => {
   );
 };
 
-Header.propTypes = {
-  gameStatus: PropTypes.string.isRequired,
-};
 export default Header;

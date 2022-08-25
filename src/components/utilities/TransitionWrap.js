@@ -55,6 +55,7 @@ const TransitionWrap = ({ children, show, anim, className }) => {
       leaveFrom={anims[anim].leaveFrom}
       leaveTo={anims[anim].leaveTo}
       className={className}
+      data-testid="transition-wrap"
     >
       {children}
     </Transition>

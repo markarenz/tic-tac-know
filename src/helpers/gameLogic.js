@@ -1,5 +1,4 @@
 import {
-  //   symbols,
   sides,
   X,
   O,
@@ -11,9 +10,10 @@ import {
   LOCAL_STORAGE_KEYS,
 } from '../constants';
 
-const sleep = (milliseconds) => {
-  return new Promise((resolve) => setTimeout(resolve, milliseconds));
-};
+const sleep = (milliseconds) =>
+  process.env.NODE_ENV === 'test'
+    ? null
+    : new Promise((resolve) => setTimeout(resolve, milliseconds));
 
 const checkWinner = (gameBoard) => {
   var result = null;
@@ -76,6 +76,7 @@ const cpuSelectMove = async (gameBoard, aiLevel) => {
       i = cpuSelectMoveRnd(gameBoard);
       break;
   }
+  // await new Promise((resolve) => setTimeout(resolve, 500));
   await sleep(500);
   return i;
 };
@@ -114,7 +115,8 @@ const getSideLabels = (playerLabel) => {
 const storeGameResults = (turnHistory) => {
   const legacyHistoryStr = localStorage.getItem(LOCAL_STORAGE_KEYS.HISTORY);
   const legacyHistory = legacyHistoryStr ? JSON.parse(legacyHistoryStr) : [];
-  const historyIsNew = !legacyHistory.some((h) => h === turnHistory);
+  const turnHistoryStr = JSON.stringify(turnHistory);
+  const historyIsNew = !legacyHistory.some((h) => JSON.stringify(h) === turnHistoryStr);
   const newHistory = historyIsNew ? [...legacyHistory, turnHistory] : legacyHistory;
   localStorage.setItem(LOCAL_STORAGE_KEYS.HISTORY, JSON.stringify(newHistory));
 };
@@ -134,9 +136,9 @@ export {
   processCpuTurn,
   getSideLabels,
   checkWinner,
-  cpuSelectMove,
   storeGameResults,
   saveWinsLosses,
   readWinsLosses,
   sleep,
+  cpuSelectMove,
 };

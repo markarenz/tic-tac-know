@@ -6,6 +6,7 @@ const MenuNav = ({ handleClickPrev, handleClickNext }) => {
     <div className="grid grid-cols-2 mt-4 text-white">
       <div className="text-left">
         <button
+          data-testid="menu-nav-prev"
           onClick={handleClickPrev}
           className="text-4xl hover:scale-125 transition-scale duration-300"
         >
@@ -14,6 +15,7 @@ const MenuNav = ({ handleClickPrev, handleClickNext }) => {
       </div>
       <div className="text-right">
         <button
+          data-testid="menu-nav-next"
           onClick={handleClickNext}
           className="text-4xl hover:scale-125 transition-scale duration-300"
         >

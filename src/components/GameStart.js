@@ -25,7 +25,7 @@ const GameStart = ({ show, handleStartClick }) => {
     return null;
   }
   return (
-    <div className="">
+    <div data-testid="gamestart">
       <TransitionWrap show={show && !isExiting} anim="fadeInOut" className="">
         <div className={`absolute left-0 top-0 w-full h-screen bg-black/60`} />
       </TransitionWrap>
@@ -57,6 +57,7 @@ const GameStart = ({ show, handleStartClick }) => {
           </div>
           <div className="text-right">
             <button
+              data-testid="gameStart-btn-start"
               className="uppercase bg-transparent text-white border-2 border-white hover:bg-white hover:text-purple-900 rounded-md py-2 px-4 transition-all hover:scale-110 duration-300"
               onClick={handleModalStartClick}
             >
