@@ -1,5 +1,6 @@
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
+import { mockRandom } from 'jest-mock-random';
 import App from '../App';
 
 beforeEach(() => {

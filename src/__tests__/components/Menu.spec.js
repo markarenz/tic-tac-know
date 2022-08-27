@@ -1,7 +1,12 @@
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
+import { mockRandom } from 'jest-mock-random';
 import { act } from 'react-dom/test-utils';
 import Menu from '../../components/Menu';
 import { AI_LEVELS, X } from '../../constants';
+
+beforeEach(() => {
+  mockRandom(0);
+});
 
 describe('Menu', () => {
   const mocks = {
@@ -17,6 +22,7 @@ describe('Menu', () => {
     expect(container).toMatchSnapshot();
   });
   it('handles startmenu-play click', async () => {
+    // jest.useFakeTimers();
     const container = render(<Menu {...mocks} />);
     await act(async () => {
       fireEvent(
@@ -27,7 +33,10 @@ describe('Menu', () => {
         })
       );
     });
-    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    // await new Promise((resolve) => setTimeout(resolve, 0));
+    // jest.advanceTimersByTime(750);
+    // jest.runAllTimers();
     await waitFor(() => {
       expect(container).toMatchSnapshot();
     });
@@ -48,6 +57,44 @@ describe('Menu', () => {
     await new Promise((resolve) => setTimeout(resolve, 0));
     await waitFor(() => {
       expect(container).toMatchSnapshot();
+    });
+  });
+
+  it('handles cancel', async () => {
+    // jest.useFakeTimers();
+    const container = render(<Menu {...mocks} />);
+    await act(async () => {
+      fireEvent(
+        screen.getByTestId('test-handleResetCancel'),
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        })
+      );
+    });
+    // jest.runOnlyPendingTimers();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    await waitFor(() => {
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  it('handles confirm reset', async () => {
+    // jest.useFakeTimers();
+    const container = render(<Menu {...mocks} />);
+    await act(async () => {
+      fireEvent(
+        screen.getByTestId('test-handleResetConfirmClick'),
+        new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+        })
+      );
+    });
+    // jest.runOnlyPendingTimers();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    await waitFor(() => {
+      expect(mocks.handleResetGameData).toHaveBeenCalled();
     });
   });
 

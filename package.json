@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,6 +50,8 @@
     ],
     "collectCoverageFrom": [
       "src/**/*.js",
+      "!src/**/index.js",
+      "!src/**/reportWebVitals.js",
       "!<rootDir>/node_modules/",
       "!<rootDir>/path/to/dir/",
       "!**/__fixtures__/**",

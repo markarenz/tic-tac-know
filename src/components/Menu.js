@@ -103,6 +103,9 @@ const Menu = ({
               <button data-testid="test-handleClickNext" onClick={handleClickNext}>
                 test
               </button>
+              <button data-testid="test-handleResetConfirmClick" onClick={handleResetConfirmClick}>
+                test
+              </button>
             </div>
           )}
         </div>
