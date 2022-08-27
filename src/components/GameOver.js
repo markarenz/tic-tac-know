@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TransitionWrap } from '../components';
 import { gameOverMessages, PLAYER, CPU } from '../constants';
-import { Trophy, Cpu } from '../icons';
+import { Trophy, Cpu, Ban } from '../icons';
 import PropTypes from 'prop-types';
 
 const GameOver = ({ isRestarting, gameResult, aiLevel, handleGoToMenu, handlePlayAgain }) => {
@@ -38,6 +38,14 @@ const GameOver = ({ isRestarting, gameResult, aiLevel, handleGoToMenu, handlePla
                   <div className="w-48 h-24 flex">
                     <Cpu aiLevel={aiLevel} />
                     <Trophy />
+                  </div>
+                )}
+                {gameResult?.side === 'draw' && (
+                  <div className="w-24 h-24 flex relative justify-center">
+                    <Trophy className="mx-auto" style={{ margin: '0 auto' }} />
+                    <div className="absolute top-0 left-0 w-full h-full">
+                      <Ban />
+                    </div>
                   </div>
                 )}
               </div>

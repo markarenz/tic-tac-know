@@ -1,0 +1,802 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PickAILevel renders component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class=""
+        data-testid="transition-wrap"
+      >
+        <div
+          class="bg-purple-900 w-screen text-white border-2 border-purple-400 rounded-lg p-4 w-full max-w-xl drop-shadow-xl"
+        >
+          <div
+            class="text-2xl uppercase"
+            id="menu-pick-side"
+          >
+            Pick your AI opponent:
+          </div>
+          <div
+            class="grid grid-cols-4 gap-4 mt-4"
+          >
+            <div>
+              <button
+                class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gradient-to-t from-yellow-900 to-yellow-400 rounded-lg border-purple-400 text-white"
+                data-testid="test-btn-ai-1"
+              >
+                <div
+                  class="p-2"
+                >
+                  <svg
+                    version="1.1"
+                    viewBox="0 0 56.702 45.17"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                      display="inline"
+                      fill="gray"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M8.226 4.578H48.513V33.593H8.226z"
+                      display="inline"
+                      fill="#551b81"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.906"
+                    />
+                    <path
+                      d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                      display="inline"
+                      fill="#b2b2b2"
+                      fill-opacity="0.995"
+                      stroke="#1a1a1a"
+                      stroke-miterlimit="60.9"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                      display="inline"
+                      fill="#333"
+                      fill-opacity="1"
+                      stroke-width="0.892"
+                    />
+                    <circle
+                      cx="28.387"
+                      cy="2.547"
+                      display="inline"
+                      fill="#330080"
+                      r="0.75"
+                      stroke-width="0.845"
+                    />
+                    <path
+                      d="M20.814 21.51H36.1v6.806q0 1.386-1.019 2.385-.998.998-2.384.998h-1.692q-1.386 0-2.405-.998-.998-.999-.998-2.385v-3.403h-6.787zm8.499 3.403v1.691q0 .714.489 1.203.51.51 1.202.51h1.692q.713 0 1.202-.51.51-.49.51-1.203v-1.691z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                    <path
+                      d="M22.225 14.692h3.404v3.404h-3.404zm8.499 0h3.383v3.404h-3.383z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div>
+              <button
+                class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+                data-testid="test-btn-ai-2"
+              >
+                <div
+                  class="p-2"
+                >
+                  <svg
+                    version="1.1"
+                    viewBox="0 0 56.702 45.17"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                      display="inline"
+                      fill="gray"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M8.226 4.578H48.513V33.593H8.226z"
+                      display="inline"
+                      fill="#551b81"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.906"
+                    />
+                    <path
+                      d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                      display="inline"
+                      fill="#b2b2b2"
+                      fill-opacity="0.995"
+                      stroke="#1a1a1a"
+                      stroke-miterlimit="60.9"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                      display="inline"
+                      fill="#333"
+                      fill-opacity="1"
+                      stroke-width="0.892"
+                    />
+                    <circle
+                      cx="28.387"
+                      cy="2.547"
+                      display="inline"
+                      fill="#330080"
+                      r="0.75"
+                      stroke-width="0.845"
+                    />
+                    <path
+                      d="M29.379 26.6h-1.772v-.148q0-1.602-1.75-1.602h-3.52q-3.1 0-3.501-3.521h1.75q.148 1.77 1.75 1.77h3.521q1.519 0 2.636 1.182Q29.611 23.1 31.13 23.1h3.521q1.624 0 1.75-1.771h1.75q-.4 3.52-3.5 3.52H31.13q-1.75 0-1.75 1.603z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                    <path
+                      d="M25.57 14.665v3.446h-3.447q-3.055 0-3.447-3.446h1.734q.041 1.671 1.713 1.733v-1.733zm5.16 0h3.426v3.446H30.73z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div>
+              <button
+                class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+                data-testid="test-btn-ai-3"
+              >
+                <div
+                  class="p-2"
+                >
+                  <svg
+                    version="1.1"
+                    viewBox="0 0 56.702 45.17"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                      display="inline"
+                      fill="gray"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M8.226 4.578H48.513V33.593H8.226z"
+                      display="inline"
+                      fill="#551b81"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.906"
+                    />
+                    <path
+                      d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                      display="inline"
+                      fill="#b2b2b2"
+                      fill-opacity="0.995"
+                      stroke="#1a1a1a"
+                      stroke-miterlimit="60.9"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                      display="inline"
+                      fill="#333"
+                      fill-opacity="1"
+                      stroke-width="0.892"
+                    />
+                    <circle
+                      cx="28.387"
+                      cy="2.547"
+                      display="inline"
+                      fill="#330080"
+                      r="0.75"
+                      stroke-width="0.845"
+                    />
+                    <path
+                      d="M37.9 22.106v1.713H18.994v-1.713z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                    <path
+                      d="M22.225 14.692h3.404v3.404h-3.404zm8.499 0h3.383v3.404h-3.383z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div>
+              <button
+                class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+                data-testid="test-btn-ai-4"
+              >
+                <div
+                  class="p-2"
+                >
+                  <svg
+                    version="1.1"
+                    viewBox="0 0 56.702 45.17"
+                    width="100%"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                      display="inline"
+                      fill="gray"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M8.226 4.578H48.513V33.593H8.226z"
+                      display="inline"
+                      fill="#551b81"
+                      fill-opacity="1"
+                      stroke="#1a1a1a"
+                      stroke-opacity="1"
+                      stroke-width="0.906"
+                    />
+                    <path
+                      d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                      display="inline"
+                      fill="#b2b2b2"
+                      fill-opacity="0.995"
+                      stroke="#1a1a1a"
+                      stroke-miterlimit="60.9"
+                      stroke-opacity="1"
+                      stroke-width="0.964"
+                    />
+                    <path
+                      d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                      display="inline"
+                      fill="#333"
+                      fill-opacity="1"
+                      stroke-width="0.892"
+                    />
+                    <circle
+                      cx="28.387"
+                      cy="2.547"
+                      display="inline"
+                      fill="#330080"
+                      r="0.75"
+                      stroke-width="0.845"
+                    />
+                    <path
+                      d="M38.026 21.165v.145q0 1.885-1.574 3.46-1.575 1.574-4.29 1.574h-7.251q-2.714 0-4.289-1.574-1.575-1.575-1.575-3.46v-.145h1.72q.207 1.74 1.72 1.74h12.1q1.533 0 1.72-1.74z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                    <path
+                      d="M25.57 14.665v3.446h-3.447q-3.055 0-3.447-3.446h1.734q.041 1.671 1.713 1.733v-1.733zm5.16 0h3.426v3.446H30.73z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                    <path
+                      d="M28.247 13.524l-8.373-5.351V6.165l8.373 5.35 8.373-5.35v2.008z"
+                      display="inline"
+                      fill="#fff"
+                      stroke="#1a1a1a"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          <h2
+            class="pt-4 text-2xl font-bold"
+          >
+            Herp Derp
+          </h2>
+          <div
+            class="text-white italic text-xl pt-1 leading-tight"
+          >
+            Your oppnent is, to put it bluntly, not terribly bright, making moves (and inapropriate noises) at random.
+          </div>
+          <div
+            class="grid grid-cols-2 mt-4 text-white"
+          >
+            <div
+              class="text-left"
+            >
+              <button
+                class="text-4xl hover:scale-125 transition-scale duration-300"
+                data-testid="menu-nav-prev"
+              >
+                ◀
+              </button>
+            </div>
+            <div
+              class="text-right"
+            >
+              <button
+                class="text-4xl hover:scale-125 transition-scale duration-300"
+                data-testid="menu-nav-next"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class=""
+      data-testid="transition-wrap"
+    >
+      <div
+        class="bg-purple-900 w-screen text-white border-2 border-purple-400 rounded-lg p-4 w-full max-w-xl drop-shadow-xl"
+      >
+        <div
+          class="text-2xl uppercase"
+          id="menu-pick-side"
+        >
+          Pick your AI opponent:
+        </div>
+        <div
+          class="grid grid-cols-4 gap-4 mt-4"
+        >
+          <div>
+            <button
+              class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gradient-to-t from-yellow-900 to-yellow-400 rounded-lg border-purple-400 text-white"
+              data-testid="test-btn-ai-1"
+            >
+              <div
+                class="p-2"
+              >
+                <svg
+                  version="1.1"
+                  viewBox="0 0 56.702 45.17"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                    display="inline"
+                    fill="gray"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M8.226 4.578H48.513V33.593H8.226z"
+                    display="inline"
+                    fill="#551b81"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.906"
+                  />
+                  <path
+                    d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                    display="inline"
+                    fill="#b2b2b2"
+                    fill-opacity="0.995"
+                    stroke="#1a1a1a"
+                    stroke-miterlimit="60.9"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                    display="inline"
+                    fill="#333"
+                    fill-opacity="1"
+                    stroke-width="0.892"
+                  />
+                  <circle
+                    cx="28.387"
+                    cy="2.547"
+                    display="inline"
+                    fill="#330080"
+                    r="0.75"
+                    stroke-width="0.845"
+                  />
+                  <path
+                    d="M20.814 21.51H36.1v6.806q0 1.386-1.019 2.385-.998.998-2.384.998h-1.692q-1.386 0-2.405-.998-.998-.999-.998-2.385v-3.403h-6.787zm8.499 3.403v1.691q0 .714.489 1.203.51.51 1.202.51h1.692q.713 0 1.202-.51.51-.49.51-1.203v-1.691z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                  <path
+                    d="M22.225 14.692h3.404v3.404h-3.404zm8.499 0h3.383v3.404h-3.383z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div>
+            <button
+              class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+              data-testid="test-btn-ai-2"
+            >
+              <div
+                class="p-2"
+              >
+                <svg
+                  version="1.1"
+                  viewBox="0 0 56.702 45.17"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                    display="inline"
+                    fill="gray"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M8.226 4.578H48.513V33.593H8.226z"
+                    display="inline"
+                    fill="#551b81"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.906"
+                  />
+                  <path
+                    d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                    display="inline"
+                    fill="#b2b2b2"
+                    fill-opacity="0.995"
+                    stroke="#1a1a1a"
+                    stroke-miterlimit="60.9"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                    display="inline"
+                    fill="#333"
+                    fill-opacity="1"
+                    stroke-width="0.892"
+                  />
+                  <circle
+                    cx="28.387"
+                    cy="2.547"
+                    display="inline"
+                    fill="#330080"
+                    r="0.75"
+                    stroke-width="0.845"
+                  />
+                  <path
+                    d="M29.379 26.6h-1.772v-.148q0-1.602-1.75-1.602h-3.52q-3.1 0-3.501-3.521h1.75q.148 1.77 1.75 1.77h3.521q1.519 0 2.636 1.182Q29.611 23.1 31.13 23.1h3.521q1.624 0 1.75-1.771h1.75q-.4 3.52-3.5 3.52H31.13q-1.75 0-1.75 1.603z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                  <path
+                    d="M25.57 14.665v3.446h-3.447q-3.055 0-3.447-3.446h1.734q.041 1.671 1.713 1.733v-1.733zm5.16 0h3.426v3.446H30.73z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div>
+            <button
+              class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+              data-testid="test-btn-ai-3"
+            >
+              <div
+                class="p-2"
+              >
+                <svg
+                  version="1.1"
+                  viewBox="0 0 56.702 45.17"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                    display="inline"
+                    fill="gray"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M8.226 4.578H48.513V33.593H8.226z"
+                    display="inline"
+                    fill="#551b81"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.906"
+                  />
+                  <path
+                    d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                    display="inline"
+                    fill="#b2b2b2"
+                    fill-opacity="0.995"
+                    stroke="#1a1a1a"
+                    stroke-miterlimit="60.9"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                    display="inline"
+                    fill="#333"
+                    fill-opacity="1"
+                    stroke-width="0.892"
+                  />
+                  <circle
+                    cx="28.387"
+                    cy="2.547"
+                    display="inline"
+                    fill="#330080"
+                    r="0.75"
+                    stroke-width="0.845"
+                  />
+                  <path
+                    d="M37.9 22.106v1.713H18.994v-1.713z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                  <path
+                    d="M22.225 14.692h3.404v3.404h-3.404zm8.499 0h3.383v3.404h-3.383z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div>
+            <button
+              class="relative h-full w-full border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+              data-testid="test-btn-ai-4"
+            >
+              <div
+                class="p-2"
+              >
+                <svg
+                  version="1.1"
+                  viewBox="0 0 56.702 45.17"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.245.54h36.25c3.47 0 5.246 1.82 5.246 4.081v30.85c0 2.261-1.448 4.081-3.245 4.081H8.245c-1.798 0-3.246-1.82-3.246-4.08V4.622C5 2.36 6.775.54 10.245.54z"
+                    display="inline"
+                    fill="gray"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M8.226 4.578H48.513V33.593H8.226z"
+                    display="inline"
+                    fill="#551b81"
+                    fill-opacity="1"
+                    stroke="#1a1a1a"
+                    stroke-opacity="1"
+                    stroke-width="0.906"
+                  />
+                  <path
+                    d="M.502 39.92v1.47c0 1.787 1.155 3.24 2.61 3.24h50.49c1.455 0 2.636-1.453 2.636-3.24v-1.47z"
+                    display="inline"
+                    fill="#b2b2b2"
+                    fill-opacity="0.995"
+                    stroke="#1a1a1a"
+                    stroke-miterlimit="60.9"
+                    stroke-opacity="1"
+                    stroke-width="0.964"
+                  />
+                  <path
+                    d="M0 39.703l4.487-3.635h47.524l4.691 3.51z"
+                    display="inline"
+                    fill="#333"
+                    fill-opacity="1"
+                    stroke-width="0.892"
+                  />
+                  <circle
+                    cx="28.387"
+                    cy="2.547"
+                    display="inline"
+                    fill="#330080"
+                    r="0.75"
+                    stroke-width="0.845"
+                  />
+                  <path
+                    d="M38.026 21.165v.145q0 1.885-1.574 3.46-1.575 1.574-4.29 1.574h-7.251q-2.714 0-4.289-1.574-1.575-1.575-1.575-3.46v-.145h1.72q.207 1.74 1.72 1.74h12.1q1.533 0 1.72-1.74z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                  <path
+                    d="M25.57 14.665v3.446h-3.447q-3.055 0-3.447-3.446h1.734q.041 1.671 1.713 1.733v-1.733zm5.16 0h3.426v3.446H30.73z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                  <path
+                    d="M28.247 13.524l-8.373-5.351V6.165l8.373 5.35 8.373-5.35v2.008z"
+                    display="inline"
+                    fill="#fff"
+                    stroke="#1a1a1a"
+                    stroke-opacity="0"
+                    stroke-width="0"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+        <h2
+          class="pt-4 text-2xl font-bold"
+        >
+          Herp Derp
+        </h2>
+        <div
+          class="text-white italic text-xl pt-1 leading-tight"
+        >
+          Your oppnent is, to put it bluntly, not terribly bright, making moves (and inapropriate noises) at random.
+        </div>
+        <div
+          class="grid grid-cols-2 mt-4 text-white"
+        >
+          <div
+            class="text-left"
+          >
+            <button
+              class="text-4xl hover:scale-125 transition-scale duration-300"
+              data-testid="menu-nav-prev"
+            >
+              ◀
+            </button>
+          </div>
+          <div
+            class="text-right"
+          >
+            <button
+              class="text-4xl hover:scale-125 transition-scale duration-300"
+              data-testid="menu-nav-next"
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

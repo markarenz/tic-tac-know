@@ -101,6 +101,7 @@ const Game = ({ aiLevel, goToMenu, playerSide }) => {
           setGameBoard,
           setTurnHistory,
           setIsCpuThinking,
+          turnHistory,
         });
       }
     };
@@ -112,7 +113,7 @@ const Game = ({ aiLevel, goToMenu, playerSide }) => {
         handleTriggerCpuTurn();
       }
     }
-  }, [whoseTurn, aiLevel, gameStatus, gameBoard]);
+  }, [whoseTurn, aiLevel, gameStatus, gameBoard, turnHistory]);
 
   // INITIALIZE COMPONENT
   useEffect(() => {

@@ -9,3 +9,7 @@ export { default as GameOver } from './GameOver';
 export { default as Menu } from './Menu';
 export { default as MenuNav } from './MenuNav';
 export { default as TransitionWrap } from './utilities/TransitionWrap';
+export { default as ResetConfirm } from './modals/ResetConfirm';
+export { default as PickAiLevel } from './modals/PickAILevel';
+export { default as PickSide } from './modals/PickSide';
+export { default as StartModal } from './modals/StartModal';

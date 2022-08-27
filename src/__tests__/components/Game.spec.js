@@ -41,119 +41,119 @@ describe('Game', () => {
     });
   });
 
-  it('renders game play PLAYER WIN', async () => {
-    // jest.useFakeTimers();
-    const container = render(
-      <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
-    );
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-setGameStatus-playing'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-setGameboard-player-win'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-handlePlayerSelectCell-1'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-set-game-result'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    // jest.runAllTimers();
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    await waitFor(() => {
-      expect(screen.getByTestId('game-main')).toBeTruthy();
-    });
-  });
+  // it('renders game play PLAYER WIN', async () => {
+  //   // jest.useFakeTimers();
+  //   const container = render(
+  //     <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
+  //   );
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-setGameStatus-playing'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-setGameboard-player-win'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-handlePlayerSelectCell-1'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-set-game-result'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   // jest.runAllTimers();
+  //   await new Promise((resolve) => setTimeout(resolve, 0));
+  //   await waitFor(() => {
+  //     expect(screen.getByTestId('game-main')).toBeTruthy();
+  //   });
+  // });
 
-  it('renders game play CPU WIN', async () => {
-    // jest.useFakeTimers();
-    const container = render(
-      <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
-    );
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-setGameStatus-playing'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-setGameboard-cpu-win'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-handlePlayerSelectCell-1'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-set-game-result'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    // jest.runAllTimers();
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    await waitFor(() => {
-      expect(screen.getByTestId('game-main')).toBeTruthy();
-    });
-  });
+  // it('renders game play CPU WIN', async () => {
+  //   // jest.useFakeTimers();
+  //   const container = render(
+  //     <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
+  //   );
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-setGameStatus-playing'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-setGameboard-cpu-win'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-handlePlayerSelectCell-1'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-set-game-result'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   // jest.runAllTimers();
+  //   await new Promise((resolve) => setTimeout(resolve, 0));
+  //   await waitFor(() => {
+  //     expect(screen.getByTestId('game-main')).toBeTruthy();
+  //   });
+  // });
 
-  it('renders result: playAgain', async () => {
-    const container = render(
-      <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
-    );
+  // it('renders result: playAgain', async () => {
+  //   const container = render(
+  //     <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
+  //   );
 
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-btn-play-again'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
-    });
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    await waitFor(() => {
-      expect(screen.getByTestId('game-main')).toBeTruthy();
-    });
-  });
+  //   await act(async () => {
+  //     fireEvent(
+  //       screen.getByTestId('test-btn-play-again'),
+  //       new MouseEvent('click', {
+  //         bubbles: true,
+  //         cancelable: true,
+  //       })
+  //     );
+  //   });
+  //   await new Promise((resolve) => setTimeout(resolve, 0));
+  //   await waitFor(() => {
+  //     expect(screen.getByTestId('game-main')).toBeTruthy();
+  //   });
+  // });
 });

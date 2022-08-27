@@ -22,8 +22,6 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  // jest.restoreAllMocks();
-  // jest.resetAllMocks();
   jest.clearAllMocks();
 });
 
@@ -103,6 +101,7 @@ describe('processCpuTurn', () => {
     setGameBoard: jest.fn(),
     setTurnHistory: jest.fn(),
     setIsCpuThinking: jest.fn(),
+    turnHistory: [],
   };
   it('processes CPU turn in AI_LEVEL_RND mode', () => {
     processCpuTurn(args);
@@ -200,11 +199,30 @@ describe('readWinsLosses', () => {
 });
 
 describe('cpuSelectMove', () => {
+  const turnHistory = [];
   it('Select for RANDOM', async () => {
     jest.useFakeTimers();
-
     const asyncMock = jest.fn().mockResolvedValueOnce('first call');
-    const result = await cpuSelectMove({ 1: PLAYER }, AI_LEVELS.AI_LEVEL_RND);
+    const result = await cpuSelectMove({ 1: PLAYER }, AI_LEVELS.AI_LEVEL_RND, turnHistory);
+    jest.runAllTimers();
+  });
+
+  it('Select for KI', async () => {
+    jest.useFakeTimers();
+    const asyncMock = jest.fn().mockResolvedValueOnce('first call');
+    const result = await cpuSelectMove({ 1: PLAYER }, AI_LEVELS.AI_LEVEL_KI, turnHistory);
+    jest.runAllTimers();
+  });
+  it('Select for HAH', async () => {
+    jest.useFakeTimers();
+    const asyncMock = jest.fn().mockResolvedValueOnce('first call');
+    const result = await cpuSelectMove({ 1: PLAYER }, AI_LEVELS.AI_LEVEL_HAH, turnHistory);
+    jest.runAllTimers();
+  });
+  it('Select for SMRT', async () => {
+    jest.useFakeTimers();
+    const asyncMock = jest.fn().mockResolvedValueOnce('first call');
+    const result = await cpuSelectMove({ 1: PLAYER }, AI_LEVELS.AI_LEVEL_SMRT, turnHistory);
     jest.runAllTimers();
   });
 });
