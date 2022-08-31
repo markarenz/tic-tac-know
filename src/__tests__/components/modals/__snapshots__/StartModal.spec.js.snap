@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartModal - X renders component - PLAY Click 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="text-center"
+        data-testid="transition-wrap"
+      >
+        <div
+          class="text-center mt-16 inline-block"
+        >
+          <div
+            class="relative"
+          >
+            <div
+              class="animate-pingSlowSm absolute top-0 left-0 inline-flex h-full w-full rounded-lg bg-purple-800 opacity-100"
+            />
+            <div
+              class="mb-8"
+            >
+              <button
+                class="relative px-16 py-4 text-4xl border-2 border-purple-300 text-white bg-gradient-to-t from-black to-purple-700 rounded-lg scale-100 hover:scale-[1.2] transition-scale font-bold duration-300"
+                data-testid="startmenu-play"
+              >
+                PLAY
+              </button>
+            </div>
+          </div>
+          <div
+            class="mt-4"
+          >
+            <button
+              class="relative px-4 py-2 text-lg border-2 border-purple-300 text-white bg-gradient-to-t from-black to-gray-500 rounded-lg scale-100 hover:scale-[1.2] transition-scale duration-300"
+              data-testid="startmenu-reset"
+            >
+              RESET
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="text-center"
+      data-testid="transition-wrap"
+    >
+      <div
+        class="text-center mt-16 inline-block"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            class="animate-pingSlowSm absolute top-0 left-0 inline-flex h-full w-full rounded-lg bg-purple-800 opacity-100"
+          />
+          <div
+            class="mb-8"
+          >
+            <button
+              class="relative px-16 py-4 text-4xl border-2 border-purple-300 text-white bg-gradient-to-t from-black to-purple-700 rounded-lg scale-100 hover:scale-[1.2] transition-scale font-bold duration-300"
+              data-testid="startmenu-play"
+            >
+              PLAY
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-4"
+        >
+          <button
+            class="relative px-4 py-2 text-lg border-2 border-purple-300 text-white bg-gradient-to-t from-black to-gray-500 rounded-lg scale-100 hover:scale-[1.2] transition-scale duration-300"
+            data-testid="startmenu-reset"
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,0 +1,407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PickAILevel - X renders component - O 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class=""
+        data-testid="transition-wrap"
+      >
+        <div
+          class="bg-purple-900 w-screen border-2 border-purple-400 rounded-lg p-4 w-full max-w-xl drop-shadow-xl"
+        >
+          <div
+            class="text-2xl uppercase text-white"
+            id="menu-pick-side"
+          >
+            Pick a side:
+          </div>
+          <div
+            class="grid grid-cols-2 gap-4 mt-4"
+          >
+            <div
+              class="text-center"
+            >
+              <button
+                class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+                data-testid="test-btn-side-1"
+              >
+                X
+              </button>
+            </div>
+            <div
+              class="text-center"
+            >
+              <button
+                class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gradient-to-t from-yellow-900 to-yellow-400 rounded-lg border-purple-400 text-white"
+                data-testid="test-btn-side-2"
+              >
+                O
+              </button>
+            </div>
+          </div>
+          <div>
+            <div
+              class="pt-4 text-white italic text-xl leading-tight"
+            >
+              You are playing as O. The CPU is playing as X.
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 mt-4 text-white"
+          >
+            <div
+              class="text-left"
+            >
+              <button
+                class="text-4xl hover:scale-125 transition-scale duration-300"
+                data-testid="menu-nav-prev-pickSide"
+              >
+                ◀
+              </button>
+            </div>
+            <div
+              class="text-right"
+            >
+              <button
+                class="text-4xl hover:scale-125 transition-scale duration-300"
+                data-testid="menu-nav-next-pickSide"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class=""
+      data-testid="transition-wrap"
+    >
+      <div
+        class="bg-purple-900 w-screen border-2 border-purple-400 rounded-lg p-4 w-full max-w-xl drop-shadow-xl"
+      >
+        <div
+          class="text-2xl uppercase text-white"
+          id="menu-pick-side"
+        >
+          Pick a side:
+        </div>
+        <div
+          class="grid grid-cols-2 gap-4 mt-4"
+        >
+          <div
+            class="text-center"
+          >
+            <button
+              class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+              data-testid="test-btn-side-1"
+            >
+              X
+            </button>
+          </div>
+          <div
+            class="text-center"
+          >
+            <button
+              class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gradient-to-t from-yellow-900 to-yellow-400 rounded-lg border-purple-400 text-white"
+              data-testid="test-btn-side-2"
+            >
+              O
+            </button>
+          </div>
+        </div>
+        <div>
+          <div
+            class="pt-4 text-white italic text-xl leading-tight"
+          >
+            You are playing as O. The CPU is playing as X.
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 mt-4 text-white"
+        >
+          <div
+            class="text-left"
+          >
+            <button
+              class="text-4xl hover:scale-125 transition-scale duration-300"
+              data-testid="menu-nav-prev-pickSide"
+            >
+              ◀
+            </button>
+          </div>
+          <div
+            class="text-right"
+          >
+            <button
+              class="text-4xl hover:scale-125 transition-scale duration-300"
+              data-testid="menu-nav-next-pickSide"
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`PickAILevel - X renders component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class=""
+        data-testid="transition-wrap"
+      >
+        <div
+          class="bg-purple-900 w-screen border-2 border-purple-400 rounded-lg p-4 w-full max-w-xl drop-shadow-xl"
+        >
+          <div
+            class="text-2xl uppercase text-white"
+            id="menu-pick-side"
+          >
+            Pick a side:
+          </div>
+          <div
+            class="grid grid-cols-2 gap-4 mt-4"
+          >
+            <div
+              class="text-center"
+            >
+              <button
+                class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gradient-to-t from-yellow-900 to-yellow-400 rounded-lg border-purple-400 text-white"
+                data-testid="test-btn-side-1"
+              >
+                X
+              </button>
+            </div>
+            <div
+              class="text-center"
+            >
+              <button
+                class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+                data-testid="test-btn-side-2"
+              >
+                O
+              </button>
+            </div>
+          </div>
+          <div>
+            <div
+              class="pt-4 text-white italic text-xl leading-tight"
+            >
+              You are playing as X. The CPU is playing as O.
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 mt-4 text-white"
+          >
+            <div
+              class="text-left"
+            >
+              <button
+                class="text-4xl hover:scale-125 transition-scale duration-300"
+                data-testid="menu-nav-prev-pickSide"
+              >
+                ◀
+              </button>
+            </div>
+            <div
+              class="text-right"
+            >
+              <button
+                class="text-4xl hover:scale-125 transition-scale duration-300"
+                data-testid="menu-nav-next-pickSide"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class=""
+      data-testid="transition-wrap"
+    >
+      <div
+        class="bg-purple-900 w-screen border-2 border-purple-400 rounded-lg p-4 w-full max-w-xl drop-shadow-xl"
+      >
+        <div
+          class="text-2xl uppercase text-white"
+          id="menu-pick-side"
+        >
+          Pick a side:
+        </div>
+        <div
+          class="grid grid-cols-2 gap-4 mt-4"
+        >
+          <div
+            class="text-center"
+          >
+            <button
+              class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gradient-to-t from-yellow-900 to-yellow-400 rounded-lg border-purple-400 text-white"
+              data-testid="test-btn-side-1"
+            >
+              X
+            </button>
+          </div>
+          <div
+            class="text-center"
+          >
+            <button
+              class="text-8xl relative h-full w-full py-4 border-2 transition-all duration-300 hover:scale-[1.1] bg-gray-400 border-gray-800 rounded-lg relative text-gray-200"
+              data-testid="test-btn-side-2"
+            >
+              O
+            </button>
+          </div>
+        </div>
+        <div>
+          <div
+            class="pt-4 text-white italic text-xl leading-tight"
+          >
+            You are playing as X. The CPU is playing as O.
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-2 mt-4 text-white"
+        >
+          <div
+            class="text-left"
+          >
+            <button
+              class="text-4xl hover:scale-125 transition-scale duration-300"
+              data-testid="menu-nav-prev-pickSide"
+            >
+              ◀
+            </button>
+          </div>
+          <div
+            class="text-right"
+          >
+            <button
+              class="text-4xl hover:scale-125 transition-scale duration-300"
+              data-testid="menu-nav-next-pickSide"
+            >
+              ▶
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
