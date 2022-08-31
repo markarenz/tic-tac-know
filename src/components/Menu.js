@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import { Logo } from '../icons';
 import { Bg, ResetConfirm, PickAiLevel, PickSide, StartModal } from '../components';
 import { MENU_STATUSES } from '../constants';
+import {
+  handleResetClick,
+  handleResetCancel,
+  handleResetConfirmClick,
+  handleStartClick,
+  handleClickPrev,
+  handleClickNext,
+} from '../helpers/menuLogic';
 
 const Menu = ({
   handleSelectAiLevel,
@@ -14,43 +22,6 @@ const Menu = ({
 }) => {
   const [menuStatus, setMenuStatus] = useState(MENU_STATUSES.START);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
-  const handleResetClick = () => {
-    setShowResetConfirm(true);
-  };
-  const handleResetCancel = () => {
-    setShowResetConfirm(false);
-  };
-  const handleResetConfirmClick = () => {
-    setShowResetConfirm(false);
-    handleResetGameData();
-  };
-  const handleStartClick = () => {
-    setMenuStatus('');
-    setTimeout(() => {
-      setMenuStatus(MENU_STATUSES.PICK_SIDE);
-    }, 750);
-  };
-  const handleClickPrev = () => {
-    if (menuStatus === MENU_STATUSES.PICK_SIDE) {
-      setMenuStatus('');
-      setTimeout(() => {
-        setMenuStatus(MENU_STATUSES.START);
-      }, 750);
-    } else {
-      setMenuStatus('');
-      setTimeout(() => {
-        setMenuStatus(MENU_STATUSES.PICK_SIDE);
-      }, 750);
-    }
-  };
-  const handleClickNext = () => {
-    if (menuStatus === MENU_STATUSES.PICK_SIDE) {
-      setMenuStatus('');
-      setTimeout(() => {
-        setMenuStatus(MENU_STATUSES.PICK_AI);
-      }, 750);
-    }
-  };
   return (
     <div>
       <Bg variant="menu" />
@@ -67,47 +38,33 @@ const Menu = ({
 
           <StartModal
             show={menuStatus === MENU_STATUSES.START}
-            handleStartClick={handleStartClick}
-            handleResetClick={handleResetClick}
+            handleStartClick={() => handleStartClick(setMenuStatus)}
+            handleResetClick={() => handleResetClick(setShowResetConfirm)}
           />
 
           <PickSide
             show={menuStatus === MENU_STATUSES.PICK_SIDE}
             playerSide={playerSide}
             handleSelectSide={handleSelectSide}
-            handleClickNext={handleClickNext}
-            handleClickPrev={handleClickPrev}
+            handleClickNext={() => handleClickNext(menuStatus, setMenuStatus)}
+            handleClickPrev={() => handleClickPrev(menuStatus, setMenuStatus)}
           />
 
           <PickAiLevel
             show={menuStatus === MENU_STATUSES.PICK_AI}
             handleSelectAiLevel={handleSelectAiLevel}
-            handleClickPrev={handleClickPrev}
+            handleClickPrev={() => handleClickPrev(menuStatus, setMenuStatus)}
             goToGame={goToGame}
             aiLevel={aiLevel}
           />
 
           <ResetConfirm
             show={showResetConfirm}
-            handleResetCancel={handleResetCancel}
-            handleResetConfirmClick={handleResetConfirmClick}
+            handleResetCancel={() => handleResetCancel(setShowResetConfirm)}
+            handleResetConfirmClick={() =>
+              handleResetConfirmClick(setShowResetConfirm, handleResetGameData)
+            }
           />
-          {process.env.NODE_ENV === 'test' && (
-            <div>
-              <button data-testid="test-handleResetCancel" onClick={handleResetCancel}>
-                test
-              </button>
-              <button data-testid="test-handleClickPrev" onClick={handleClickPrev}>
-                test
-              </button>
-              <button data-testid="test-handleClickNext" onClick={handleClickNext}>
-                test
-              </button>
-              <button data-testid="test-handleResetConfirmClick" onClick={handleResetConfirmClick}>
-                test
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </div>

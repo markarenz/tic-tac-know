@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { AI_LEVELS, APP_STATES, X, O, LOCAL_STORAGE_KEYS } from './constants';
+import { AI_LEVELS, APP_STATES, X, O } from './constants';
+import { handleResetGameData } from './helpers/gameLogic';
 import { Menu, Game } from './components';
 
 const App = () => {
   const [appState, setAppState] = useState(APP_STATES.MENU);
   const [aiLevel, setAiLevel] = useState(AI_LEVELS.AI_LEVEL_RND);
   const [playerSide, setPlayerSide] = useState(X);
-  const handleResetGameData = () => {
-    localStorage.removeItem(LOCAL_STORAGE_KEYS.HISTORY);
-    localStorage.removeItem(LOCAL_STORAGE_KEYS.WINS_LOSSES);
-  };
   const handleSelectAiLevel = (level) => {
     setAiLevel(level);
   };

@@ -8,16 +8,24 @@ describe('Thinking', () => {
   };
   it('renders component', () => {
     const container = render(
-      <MenuNav handleClickPrev={mocks.handleClickPrev} handleClickNext={mocks.handleClickNext} />
+      <MenuNav
+        handleClickPrev={mocks.handleClickPrev}
+        handleClickNext={mocks.handleClickNext}
+        mode="test"
+      />
     );
     expect(container).toMatchSnapshot();
   });
   it('triggers handleClickPrev on click', () => {
     const container = render(
-      <MenuNav handleClickPrev={mocks.handleClickPrev} handleClickNext={mocks.handleClickNext} />
+      <MenuNav
+        handleClickPrev={mocks.handleClickPrev}
+        handleClickNext={mocks.handleClickNext}
+        mode="test"
+      />
     );
     fireEvent(
-      screen.getByTestId('menu-nav-prev'),
+      screen.getByTestId('menu-nav-prev-test'),
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -27,10 +35,14 @@ describe('Thinking', () => {
   });
   it('triggers handleClickNext on click', () => {
     const container = render(
-      <MenuNav handleClickPrev={mocks.handleClickPrev} handleClickNext={mocks.handleClickNext} />
+      <MenuNav
+        handleClickPrev={mocks.handleClickPrev}
+        handleClickNext={mocks.handleClickNext}
+        mode="test"
+      />
     );
     fireEvent(
-      screen.getByTestId('menu-nav-next'),
+      screen.getByTestId('menu-nav-next-test'),
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -40,7 +52,11 @@ describe('Thinking', () => {
   });
   it('matches snapshot', () => {
     const container = render(
-      <MenuNav handleClickPrev={mocks.handleClickPrev} handleClickNext={mocks.handleClickNext} />
+      <MenuNav
+        handleClickPrev={mocks.handleClickPrev}
+        handleClickNext={mocks.handleClickNext}
+        mode="test"
+      />
     );
     expect(container).toMatchSnapshot();
   });

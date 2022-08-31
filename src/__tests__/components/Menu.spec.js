@@ -2,7 +2,8 @@ import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import { mockRandom } from 'jest-mock-random';
 import { act } from 'react-dom/test-utils';
 import Menu from '../../components/Menu';
-import { AI_LEVELS, X } from '../../constants';
+import { AI_LEVELS, MENU_STATUSES, X } from '../../constants';
+import { sleep } from '../../helpers/gameLogic';
 
 beforeEach(() => {
   mockRandom(0);
@@ -53,81 +54,86 @@ describe('Menu', () => {
         })
       );
     });
-
     await new Promise((resolve) => setTimeout(resolve, 0));
     await waitFor(() => {
       expect(container).toMatchSnapshot();
     });
   });
 
-  it('handles cancel', async () => {
-    // jest.useFakeTimers();
-    const container = render(<Menu {...mocks} />);
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-handleResetCancel'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
+  it('handles menu nav button toggling', async () => {
+    act(() => {
+      render(<Menu {...mocks} />);
     });
-    // jest.runOnlyPendingTimers();
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
-    });
+    fireEvent(
+      screen.getByTestId('startmenu-play'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('menu-nav-next-pickSide');
+    fireEvent(
+      screen.getByTestId('menu-nav-next-pickSide'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('menu-nav-prev-pickAiLevel');
+    fireEvent(
+      screen.getByTestId('menu-nav-prev-pickAiLevel'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('menu-nav-prev-pickSide');
+    fireEvent(
+      screen.getByTestId('menu-nav-prev-pickSide'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('startmenu-play');
+    expect(screen).toMatchSnapshot();
   });
 
-  it('handles confirm reset', async () => {
-    // jest.useFakeTimers();
-    const container = render(<Menu {...mocks} />);
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-handleResetConfirmClick'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
+  it('handles reset confirmation', async () => {
+    act(() => {
+      render(<Menu {...mocks} />);
     });
-    // jest.runOnlyPendingTimers();
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    await waitFor(() => {
-      expect(mocks.handleResetGameData).toHaveBeenCalled();
-    });
+    fireEvent(
+      screen.getByTestId('startmenu-reset'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('reset-cancel');
+    fireEvent(
+      screen.getByTestId('reset-cancel'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('startmenu-reset');
+    fireEvent(
+      screen.getByTestId('startmenu-reset'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    await screen.findByTestId('reset-ok');
+    fireEvent(
+      screen.getByTestId('reset-ok'),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    expect(mocks.handleResetGameData).toHaveBeenCalled();
   });
-
-  //   it('handles cancel, prev, next clicks', async () => {
-  //     jest.useFakeTimers();
-  //     const container = render(<Menu {...mocks} />);
-  //     await act(async () => {
-  //       fireEvent(
-  //         screen.getByTestId('test-handleResetCancel'),
-  //         new MouseEvent('click', {
-  //           bubbles: true,
-  //           cancelable: true,
-  //         })
-  //       );
-  //       fireEvent(
-  //         screen.getByTestId('test-handleClickPrev'),
-  //         new MouseEvent('click', {
-  //           bubbles: true,
-  //           cancelable: true,
-  //         })
-  //       );
-  //       fireEvent(
-  //         screen.getByTestId('test-handleClickNext'),
-  //         new MouseEvent('click', {
-  //           bubbles: true,
-  //           cancelable: true,
-  //         })
-  //       );
-  //     });
-  //     jest.runOnlyPendingTimers();
-  //     await new Promise((resolve) => setTimeout(resolve, 0));
-  //     await waitFor(() => {
-  //       expect(container).toMatchSnapshot();
-  //     });
-  //   });
 });

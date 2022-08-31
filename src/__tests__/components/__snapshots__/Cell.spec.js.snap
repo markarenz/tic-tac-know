@@ -11,7 +11,7 @@ Object {
       >
         <button
           class="w-full h-full"
-          data-testid="cell-btn"
+          data-testid="cell-btn-1"
         >
            
         </button>
@@ -25,7 +25,7 @@ Object {
     >
       <button
         class="w-full h-full"
-        data-testid="cell-btn"
+        data-testid="cell-btn-1"
       >
          
       </button>

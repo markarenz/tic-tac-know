@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import GameOver from '../../components/GameOver';
 import { AI_LEVELS, CPU, PLAYER } from '../../constants';
-import * as gameLogic from '../../helpers/gameLogic';
 
 describe('GameOver', () => {
   const mockProps = {
@@ -30,6 +29,24 @@ describe('GameOver', () => {
         {...mockProps}
         gameResult={{
           side: PLAYER,
+          winningPattern: 0,
+        }}
+      />
+    );
+    act(() => {
+      jest.runAllTimers();
+    });
+    expect(setTimeout).toHaveBeenCalled();
+  });
+
+  it('renders component with result = draw', () => {
+    jest.useFakeTimers();
+    jest.spyOn(global, 'setTimeout');
+    const container = render(
+      <GameOver
+        {...mockProps}
+        gameResult={{
+          side: 'draw',
           winningPattern: 0,
         }}
       />

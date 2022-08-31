@@ -13,7 +13,7 @@ Object {
         >
           <button
             class="text-4xl hover:scale-125 transition-scale duration-300"
-            data-testid="menu-nav-prev"
+            data-testid="menu-nav-prev-test"
           >
             ◀
           </button>
@@ -23,7 +23,7 @@ Object {
         >
           <button
             class="text-4xl hover:scale-125 transition-scale duration-300"
-            data-testid="menu-nav-next"
+            data-testid="menu-nav-next-test"
           >
             ▶
           </button>
@@ -40,7 +40,7 @@ Object {
       >
         <button
           class="text-4xl hover:scale-125 transition-scale duration-300"
-          data-testid="menu-nav-prev"
+          data-testid="menu-nav-prev-test"
         >
           ◀
         </button>
@@ -50,7 +50,7 @@ Object {
       >
         <button
           class="text-4xl hover:scale-125 transition-scale duration-300"
-          data-testid="menu-nav-next"
+          data-testid="menu-nav-next-test"
         >
           ▶
         </button>
@@ -124,7 +124,7 @@ Object {
         >
           <button
             class="text-4xl hover:scale-125 transition-scale duration-300"
-            data-testid="menu-nav-prev"
+            data-testid="menu-nav-prev-test"
           >
             ◀
           </button>
@@ -134,7 +134,7 @@ Object {
         >
           <button
             class="text-4xl hover:scale-125 transition-scale duration-300"
-            data-testid="menu-nav-next"
+            data-testid="menu-nav-next-test"
           >
             ▶
           </button>
@@ -151,7 +151,7 @@ Object {
       >
         <button
           class="text-4xl hover:scale-125 transition-scale duration-300"
-          data-testid="menu-nav-prev"
+          data-testid="menu-nav-prev-test"
         >
           ◀
         </button>
@@ -161,7 +161,7 @@ Object {
       >
         <button
           class="text-4xl hover:scale-125 transition-scale duration-300"
-          data-testid="menu-nav-next"
+          data-testid="menu-nav-next-test"
         >
           ▶
         </button>

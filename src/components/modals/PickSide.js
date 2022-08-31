@@ -47,7 +47,11 @@ const PickSide = ({ show, playerSide, handleSelectSide, handleClickNext, handleC
             {sideMessages[playerSide]}
           </div>
         </div>
-        <MenuNav handleClickPrev={handleClickPrev} handleClickNext={handleClickNext} />
+        <MenuNav
+          handleClickPrev={handleClickPrev}
+          handleClickNext={handleClickNext}
+          mode="pickSide"
+        />
       </div>
     </TransitionWrap>
   );

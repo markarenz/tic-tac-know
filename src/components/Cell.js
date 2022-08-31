@@ -59,7 +59,7 @@ const Cell = ({ i, value, handlePlayerSelectCell, whoseTurn, sideLabels, gameSta
       ) : (
         <button
           className="w-full h-full"
-          data-testid="cell-btn"
+          data-testid={`cell-btn-${i}`}
           onClick={() => handlePlayerSelectCell(i)}
           disabled={isDisabled}
         >

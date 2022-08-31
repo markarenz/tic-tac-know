@@ -57,7 +57,7 @@ Object {
             >
               <button
                 class="text-4xl hover:scale-125 transition-scale duration-300"
-                data-testid="menu-nav-prev"
+                data-testid="menu-nav-prev-pickSide"
               >
                 ◀
               </button>
@@ -67,7 +67,7 @@ Object {
             >
               <button
                 class="text-4xl hover:scale-125 transition-scale duration-300"
-                data-testid="menu-nav-next"
+                data-testid="menu-nav-next-pickSide"
               >
                 ▶
               </button>
@@ -130,7 +130,7 @@ Object {
           >
             <button
               class="text-4xl hover:scale-125 transition-scale duration-300"
-              data-testid="menu-nav-prev"
+              data-testid="menu-nav-prev-pickSide"
             >
               ◀
             </button>
@@ -140,7 +140,7 @@ Object {
           >
             <button
               class="text-4xl hover:scale-125 transition-scale duration-300"
-              data-testid="menu-nav-next"
+              data-testid="menu-nav-next-pickSide"
             >
               ▶
             </button>
@@ -260,7 +260,7 @@ Object {
             >
               <button
                 class="text-4xl hover:scale-125 transition-scale duration-300"
-                data-testid="menu-nav-prev"
+                data-testid="menu-nav-prev-pickSide"
               >
                 ◀
               </button>
@@ -270,7 +270,7 @@ Object {
             >
               <button
                 class="text-4xl hover:scale-125 transition-scale duration-300"
-                data-testid="menu-nav-next"
+                data-testid="menu-nav-next-pickSide"
               >
                 ▶
               </button>
@@ -333,7 +333,7 @@ Object {
           >
             <button
               class="text-4xl hover:scale-125 transition-scale duration-300"
-              data-testid="menu-nav-prev"
+              data-testid="menu-nav-prev-pickSide"
             >
               ◀
             </button>
@@ -343,7 +343,7 @@ Object {
           >
             <button
               class="text-4xl hover:scale-125 transition-scale duration-300"
-              data-testid="menu-nav-next"
+              data-testid="menu-nav-next-pickSide"
             >
               ▶
             </button>

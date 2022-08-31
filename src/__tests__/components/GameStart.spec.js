@@ -24,7 +24,6 @@ describe('GameStart', () => {
   });
 
   it('reacts when start is clicked', async () => {
-    // jest.useFakeTimers();
     render(<GameStart show={true} handleStartClick={mocks.handleStartClick} />);
     fireEvent(
       screen.getByTestId('gameStart-btn-start'),

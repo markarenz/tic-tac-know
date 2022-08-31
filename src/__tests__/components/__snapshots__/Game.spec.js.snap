@@ -85,7 +85,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-1"
                   disabled=""
                 >
                    
@@ -97,7 +97,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-2"
                   disabled=""
                 >
                    
@@ -109,7 +109,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-3"
                   disabled=""
                 >
                    
@@ -121,7 +121,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-4"
                   disabled=""
                 >
                    
@@ -133,7 +133,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-5"
                   disabled=""
                 >
                    
@@ -145,7 +145,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-6"
                   disabled=""
                 >
                    
@@ -157,7 +157,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-7"
                   disabled=""
                 >
                    
@@ -169,7 +169,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-8"
                   disabled=""
                 >
                    
@@ -181,7 +181,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-9"
                   disabled=""
                 >
                    
@@ -274,43 +274,13 @@ Object {
             </div>
           </div>
           <div />
-        </div>
-        <div>
-          <button
-            data-testid="test-btn-game-start"
-          >
-            gameStart
-          </button>
-          <button
-            data-testid="test-btn-play-again"
-          >
-            gameStart
-          </button>
-          <button
-            data-testid="test-setGameStatus-playing"
-          >
-            gameStatusPlaying
-          </button>
-          <button
-            data-testid="test-setGameboard-player-win"
-          >
-            near-win-PLAYER
-          </button>
-          <button
-            data-testid="test-setGameboard-cpu-win"
-          >
-            near-win-CPU
-          </button>
-          <button
-            data-testid="test-handlePlayerSelectCell-1"
-          >
-            handlePlayerSelectCell(1)
-          </button>
-          <button
-            data-testid="test-set-game-result"
-          >
-            gameComplete
-          </button>
+          <div>
+            <button
+              data-testid="game-test-playAgain"
+            >
+              gameOver
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -396,7 +366,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-1"
                 disabled=""
               >
                  
@@ -408,7 +378,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-2"
                 disabled=""
               >
                  
@@ -420,7 +390,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-3"
                 disabled=""
               >
                  
@@ -432,7 +402,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-4"
                 disabled=""
               >
                  
@@ -444,7 +414,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-5"
                 disabled=""
               >
                  
@@ -456,7 +426,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-6"
                 disabled=""
               >
                  
@@ -468,7 +438,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-7"
                 disabled=""
               >
                  
@@ -480,7 +450,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-8"
                 disabled=""
               >
                  
@@ -492,7 +462,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-9"
                 disabled=""
               >
                  
@@ -585,43 +555,13 @@ Object {
           </div>
         </div>
         <div />
-      </div>
-      <div>
-        <button
-          data-testid="test-btn-game-start"
-        >
-          gameStart
-        </button>
-        <button
-          data-testid="test-btn-play-again"
-        >
-          gameStart
-        </button>
-        <button
-          data-testid="test-setGameStatus-playing"
-        >
-          gameStatusPlaying
-        </button>
-        <button
-          data-testid="test-setGameboard-player-win"
-        >
-          near-win-PLAYER
-        </button>
-        <button
-          data-testid="test-setGameboard-cpu-win"
-        >
-          near-win-CPU
-        </button>
-        <button
-          data-testid="test-handlePlayerSelectCell-1"
-        >
-          handlePlayerSelectCell(1)
-        </button>
-        <button
-          data-testid="test-set-game-result"
-        >
-          gameComplete
-        </button>
+        <div>
+          <button
+            data-testid="game-test-playAgain"
+          >
+            gameOver
+          </button>
+        </div>
       </div>
     </div>
   </div>,
@@ -679,7 +619,7 @@ Object {
 }
 `;
 
-exports[`Game renders result: gameStart 1`] = `
+exports[`Game renders renders with clicks 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -781,7 +721,7 @@ Object {
                   <div
                     class="text-3xl animate-zoomDown"
                   >
-                    o
+                    x
                   </div>
                 </div>
               </div>
@@ -791,7 +731,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-2"
                 >
                    
                 </button>
@@ -802,7 +742,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-3"
                 >
                    
                 </button>
@@ -813,32 +753,38 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-4"
                 >
                    
                 </button>
               </div>
               <div
-                class="text-center border-gray-500 h-32 border-2  "
+                class="text-center border-gray-500 h-32 border-2 bg-white "
                 id="cell-5"
               >
-                <button
-                  class="w-full h-full"
-                  data-testid="cell-btn"
+                <div
+                  class="w-full h-full relative flex justify-center items-center"
                 >
-                   
-                </button>
+                  <div
+                    class="text-3xl animate-zoomDown"
+                  >
+                    o
+                  </div>
+                </div>
               </div>
               <div
-                class="text-center border-gray-500 h-32 border-t-2 border-b-2  "
+                class="text-center border-gray-500 h-32 border-t-2 border-b-2 bg-white "
                 id="cell-6"
               >
-                <button
-                  class="w-full h-full"
-                  data-testid="cell-btn"
+                <div
+                  class="w-full h-full relative flex justify-center items-center"
                 >
-                   
-                </button>
+                  <div
+                    class="text-3xl animate-zoomDown"
+                  >
+                    o
+                  </div>
+                </div>
               </div>
               <div
                 class="text-center border-gray-500 h-32   "
@@ -846,7 +792,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-7"
                 >
                    
                 </button>
@@ -857,7 +803,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-8"
                 >
                    
                 </button>
@@ -868,7 +814,7 @@ Object {
               >
                 <button
                   class="w-full h-full"
-                  data-testid="cell-btn"
+                  data-testid="cell-btn-9"
                 >
                    
                 </button>
@@ -887,116 +833,15 @@ Object {
           </div>
           <div
             data-testid="gamestart"
-          >
-            <div
-              class="transition-opacity duration-500 opacity-100"
-              data-testid="transition-wrap"
-            >
-              <div
-                class="absolute left-0 top-0 w-full h-screen bg-black/60"
-              />
-            </div>
-            <div
-              class="absolute left-0 top-0 w-full h-screen flex items-center justify-center transition-all duration-500 opacity-100 translate-x-0"
-              data-testid="transition-wrap"
-            >
-              <div
-                class="bg-purple-900 text-white border-2 border-purple-400 rounded-lg p-4 w-full max-w-lg drop-shadow-xl"
-              >
-                <div
-                  class="grid grid-cols-4"
-                >
-                  <div
-                    class="pr-2"
-                  >
-                    <div
-                      class="h-full flex justify-center align-center"
-                    >
-                      <div>
-                        <img
-                          alt="heads"
-                          src="heads.png"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-span-3"
-                  >
-                    <div
-                      class="flex justify-center items-center h-full"
-                    >
-                      <div>
-                        <h2
-                          class="text-3xl text-center"
-                        >
-                          <i>
-                            The coin toss came up 
-                            heads
-                            .
-                          </i>
-                        </h2>
-                        <h3
-                          class="text-xl text-center"
-                        >
-                          PLAYER
-                           goes first this time.
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="text-right"
-                >
-                  <button
-                    class="uppercase bg-transparent text-white border-2 border-white hover:bg-white hover:text-purple-900 rounded-md py-2 px-4 transition-all hover:scale-110 duration-300"
-                    data-testid="gameStart-btn-start"
-                  >
-                    Begin
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          />
           <div />
-        </div>
-        <div>
-          <button
-            data-testid="test-btn-game-start"
-          >
-            gameStart
-          </button>
-          <button
-            data-testid="test-btn-play-again"
-          >
-            gameStart
-          </button>
-          <button
-            data-testid="test-setGameStatus-playing"
-          >
-            gameStatusPlaying
-          </button>
-          <button
-            data-testid="test-setGameboard-player-win"
-          >
-            near-win-PLAYER
-          </button>
-          <button
-            data-testid="test-setGameboard-cpu-win"
-          >
-            near-win-CPU
-          </button>
-          <button
-            data-testid="test-handlePlayerSelectCell-1"
-          >
-            handlePlayerSelectCell(1)
-          </button>
-          <button
-            data-testid="test-set-game-result"
-          >
-            gameComplete
-          </button>
+          <div>
+            <button
+              data-testid="game-test-playAgain"
+            >
+              gameOver
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1099,7 +944,7 @@ Object {
                 <div
                   class="text-3xl animate-zoomDown"
                 >
-                  o
+                  x
                 </div>
               </div>
             </div>
@@ -1109,7 +954,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-2"
               >
                  
               </button>
@@ -1120,7 +965,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-3"
               >
                  
               </button>
@@ -1131,32 +976,38 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-4"
               >
                  
               </button>
             </div>
             <div
-              class="text-center border-gray-500 h-32 border-2  "
+              class="text-center border-gray-500 h-32 border-2 bg-white "
               id="cell-5"
             >
-              <button
-                class="w-full h-full"
-                data-testid="cell-btn"
+              <div
+                class="w-full h-full relative flex justify-center items-center"
               >
-                 
-              </button>
+                <div
+                  class="text-3xl animate-zoomDown"
+                >
+                  o
+                </div>
+              </div>
             </div>
             <div
-              class="text-center border-gray-500 h-32 border-t-2 border-b-2  "
+              class="text-center border-gray-500 h-32 border-t-2 border-b-2 bg-white "
               id="cell-6"
             >
-              <button
-                class="w-full h-full"
-                data-testid="cell-btn"
+              <div
+                class="w-full h-full relative flex justify-center items-center"
               >
-                 
-              </button>
+                <div
+                  class="text-3xl animate-zoomDown"
+                >
+                  o
+                </div>
+              </div>
             </div>
             <div
               class="text-center border-gray-500 h-32   "
@@ -1164,7 +1015,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-7"
               >
                  
               </button>
@@ -1175,7 +1026,7 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-8"
               >
                  
               </button>
@@ -1186,7 +1037,537 @@ Object {
             >
               <button
                 class="w-full h-full"
-                data-testid="cell-btn"
+                data-testid="cell-btn-9"
+              >
+                 
+              </button>
+            </div>
+          </div>
+          <div
+            class="text-right mt-4"
+          >
+            Wins: 
+            0
+            , Losses: 
+            0
+            , Draws: 
+            0
+          </div>
+        </div>
+        <div
+          data-testid="gamestart"
+        />
+        <div />
+        <div>
+          <button
+            data-testid="game-test-playAgain"
+          >
+            gameOver
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Game renders renders with playAgain 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        data-testid="game-main"
+      >
+        <div
+          class="absolute w-full h-full left-0 top-0"
+        >
+          <div
+            class="absolute w-full h-full left-0 top-0 w-full h-full bgPatternGame"
+          />
+          <div
+            class="absolute w-full h-full left-0 top-0 bg-gradient-to-t from-purple-900 mix-blend-multiply"
+          />
+        </div>
+        <div
+          class="relative h-full"
+        >
+          <header
+            class="flex justify-between items-center bg-purple-600/50 px-4 py-4 mb-8 relative z-10"
+          >
+            <h1
+              class="text-3xl lg:text-2xl md:text-xl text-center text-white"
+            >
+              <b>
+                Tic-Tac-Know:
+              </b>
+               
+              <i>
+                A game that Learns as you play.
+              </i>
+            </h1>
+            <div>
+              <a
+                class="text-white"
+                href="https://www.markmakesstuff.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                More Stuff
+              </a>
+            </div>
+          </header>
+          <div
+            class="max-w-sm mx-auto my-4 bg-white rounded-lg p-4"
+          >
+            <div
+              class="mb-4"
+            >
+              <div
+                class="grid grid-cols-2"
+              >
+                <div
+                  class="overflow-hidden"
+                >
+                  <div
+                    class="transition-all duration-500 opacity-0 -translate-x-16"
+                    data-testid="transition-wrap"
+                  >
+                    <div
+                      class="uppercase"
+                    >
+                      <b>
+                        Your turn
+                      </b>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="overflow-hidden"
+                />
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-3"
+            >
+              <div
+                class="text-center border-gray-500 h-32   "
+                id="cell-1"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-1"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32 border-l-2 border-r-2  "
+                id="cell-2"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-2"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32   "
+                id="cell-3"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-3"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32 border-t-2 border-b-2  "
+                id="cell-4"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-4"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32 border-2  "
+                id="cell-5"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-5"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32 border-t-2 border-b-2  "
+                id="cell-6"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-6"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32   "
+                id="cell-7"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-7"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32 border-l-2 border-r-2  "
+                id="cell-8"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-8"
+                >
+                   
+                </button>
+              </div>
+              <div
+                class="text-center border-gray-500 h-32   "
+                id="cell-9"
+              >
+                <button
+                  class="w-full h-full"
+                  data-testid="cell-btn-9"
+                >
+                   
+                </button>
+              </div>
+            </div>
+            <div
+              class="text-right mt-4"
+            >
+              Wins: 
+              0
+              , Losses: 
+              0
+              , Draws: 
+              0
+            </div>
+          </div>
+          <div
+            data-testid="gamestart"
+          >
+            <div
+              class="transition-opacity duration-500 opacity-100"
+              data-testid="transition-wrap"
+            >
+              <div
+                class="absolute left-0 top-0 w-full h-screen bg-black/60"
+              />
+            </div>
+            <div
+              class="absolute left-0 top-0 w-full h-screen flex items-center justify-center transition-all duration-500 opacity-100 translate-x-0"
+              data-testid="transition-wrap"
+            >
+              <div
+                class="bg-purple-900 text-white border-2 border-purple-400 rounded-lg p-4 w-full max-w-lg drop-shadow-xl"
+              >
+                <div
+                  class="grid grid-cols-4"
+                >
+                  <div
+                    class="pr-2"
+                  >
+                    <div
+                      class="h-full flex justify-center align-center"
+                    >
+                      <div>
+                        <img
+                          alt="heads"
+                          src="heads.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-3"
+                  >
+                    <div
+                      class="flex justify-center items-center h-full"
+                    >
+                      <div>
+                        <h2
+                          class="text-3xl text-center"
+                        >
+                          <i>
+                            The coin toss came up 
+                            heads
+                            .
+                          </i>
+                        </h2>
+                        <h3
+                          class="text-xl text-center"
+                        >
+                          PLAYER
+                           goes first this time.
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="text-right"
+                >
+                  <button
+                    class="uppercase bg-transparent text-white border-2 border-white hover:bg-white hover:text-purple-900 rounded-md py-2 px-4 transition-all hover:scale-110 duration-300"
+                    data-testid="gameStart-btn-start"
+                  >
+                    Begin
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div />
+          <div>
+            <button
+              data-testid="game-test-playAgain"
+            >
+              gameOver
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      data-testid="game-main"
+    >
+      <div
+        class="absolute w-full h-full left-0 top-0"
+      >
+        <div
+          class="absolute w-full h-full left-0 top-0 w-full h-full bgPatternGame"
+        />
+        <div
+          class="absolute w-full h-full left-0 top-0 bg-gradient-to-t from-purple-900 mix-blend-multiply"
+        />
+      </div>
+      <div
+        class="relative h-full"
+      >
+        <header
+          class="flex justify-between items-center bg-purple-600/50 px-4 py-4 mb-8 relative z-10"
+        >
+          <h1
+            class="text-3xl lg:text-2xl md:text-xl text-center text-white"
+          >
+            <b>
+              Tic-Tac-Know:
+            </b>
+             
+            <i>
+              A game that Learns as you play.
+            </i>
+          </h1>
+          <div>
+            <a
+              class="text-white"
+              href="https://www.markmakesstuff.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              More Stuff
+            </a>
+          </div>
+        </header>
+        <div
+          class="max-w-sm mx-auto my-4 bg-white rounded-lg p-4"
+        >
+          <div
+            class="mb-4"
+          >
+            <div
+              class="grid grid-cols-2"
+            >
+              <div
+                class="overflow-hidden"
+              >
+                <div
+                  class="transition-all duration-500 opacity-0 -translate-x-16"
+                  data-testid="transition-wrap"
+                >
+                  <div
+                    class="uppercase"
+                  >
+                    <b>
+                      Your turn
+                    </b>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="overflow-hidden"
+              />
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-3"
+          >
+            <div
+              class="text-center border-gray-500 h-32   "
+              id="cell-1"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-1"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32 border-l-2 border-r-2  "
+              id="cell-2"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-2"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32   "
+              id="cell-3"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-3"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32 border-t-2 border-b-2  "
+              id="cell-4"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-4"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32 border-2  "
+              id="cell-5"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-5"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32 border-t-2 border-b-2  "
+              id="cell-6"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-6"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32   "
+              id="cell-7"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-7"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32 border-l-2 border-r-2  "
+              id="cell-8"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-8"
+              >
+                 
+              </button>
+            </div>
+            <div
+              class="text-center border-gray-500 h-32   "
+              id="cell-9"
+            >
+              <button
+                class="w-full h-full"
+                data-testid="cell-btn-9"
               >
                  
               </button>
@@ -1278,43 +1659,13 @@ Object {
           </div>
         </div>
         <div />
-      </div>
-      <div>
-        <button
-          data-testid="test-btn-game-start"
-        >
-          gameStart
-        </button>
-        <button
-          data-testid="test-btn-play-again"
-        >
-          gameStart
-        </button>
-        <button
-          data-testid="test-setGameStatus-playing"
-        >
-          gameStatusPlaying
-        </button>
-        <button
-          data-testid="test-setGameboard-player-win"
-        >
-          near-win-PLAYER
-        </button>
-        <button
-          data-testid="test-setGameboard-cpu-win"
-        >
-          near-win-CPU
-        </button>
-        <button
-          data-testid="test-handlePlayerSelectCell-1"
-        >
-          handlePlayerSelectCell(1)
-        </button>
-        <button
-          data-testid="test-set-game-result"
-        >
-          gameComplete
-        </button>
+        <div>
+          <button
+            data-testid="game-test-playAgain"
+          >
+            gameOver
+          </button>
+        </div>
       </div>
     </div>
   </div>,

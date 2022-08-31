@@ -8,6 +8,7 @@ import {
   saveWinsLosses,
   readWinsLosses,
   cpuSelectMove,
+  handleResetGameData,
 } from '../../helpers/gameLogic';
 import { mockRandom } from 'jest-mock-random';
 
@@ -199,7 +200,7 @@ describe('readWinsLosses', () => {
 });
 
 describe('cpuSelectMove', () => {
-  const turnHistory = [];
+  let turnHistory = [];
   it('Select for RANDOM', async () => {
     jest.useFakeTimers();
     const asyncMock = jest.fn().mockResolvedValueOnce('first call');
@@ -220,9 +221,31 @@ describe('cpuSelectMove', () => {
     jest.runAllTimers();
   });
   it('Select for SMRT', async () => {
+    turnHistory = [
+      { i: 1, whoseTurn: 'cpu' },
+      { i: 5, whoseTurn: 'player' },
+      { i: 2, whoseTurn: 'cpu' },
+      { i: 7, whoseTurn: 'player' },
+    ];
     jest.useFakeTimers();
-    const asyncMock = jest.fn().mockResolvedValueOnce('first call');
-    const result = await cpuSelectMove({ 1: PLAYER }, AI_LEVELS.AI_LEVEL_SMRT, turnHistory);
+    Storage.prototype.getItem = jest.fn(
+      () =>
+        '[[{"i":1,"whoseTurn":"cpu"},{"i":5,"whoseTurn":"player"},{"i":2,"whoseTurn":"cpu"},{"i":7,"whoseTurn":"player"}, {"i":3,"whoseTurn":"cpu"}, {"side": "cpu", "winningPattern": 0}],[{"i":1,"whoseTurn":"cpu"},{"i":5,"whoseTurn":"player"},{"i":2,"whoseTurn":"cpu"},{"i":7,"whoseTurn":"player"}, {"i":8,"whoseTurn":"cpu"}, {"i":9,"whoseTurn":"player"}, {"side": "player", "winningPattern": 7}]]'
+    );
+    let result = await cpuSelectMove({ 3: PLAYER }, AI_LEVELS.AI_LEVEL_SMRT, turnHistory);
     jest.runAllTimers();
+    expect(result).toBe(3);
+
+    Storage.prototype.getItem = jest.fn(() => '[]');
+    result = await cpuSelectMove({ 3: PLAYER }, AI_LEVELS.AI_LEVEL_SMRT, []);
+    jest.runAllTimers();
+    expect(result).toBe(1);
   });
+});
+
+describe('handleResetGameData', () => {
+  jest.spyOn(Storage.prototype, 'removeItem');
+  localStorage.removeItem = jest.fn();
+  handleResetGameData();
+  expect(localStorage.removeItem).toHaveBeenCalled();
 });

@@ -104,10 +104,6 @@ const cpuSelectMoveKI = (gameBoard) => {
 
 const cpuSelectMoveSmrt = (gameBoard, turnHistory) => {
   const openCells = getOpenCells(gameBoard);
-  const immediate = checkNextMoveWinLoss(gameBoard, openCells);
-  if (immediate) {
-    return immediate;
-  }
   // READ LEGACY HISTORY FROM LOCALSTORAGE
   const legacyHistoryStr = localStorage.getItem(LOCAL_STORAGE_KEYS.HISTORY);
   const legacyHistory = legacyHistoryStr ? JSON.parse(legacyHistoryStr) : [];
@@ -225,6 +221,13 @@ const readWinsLosses = (setWinsLosses) => {
   }
 };
 
+const isTesting = () => process.env.NODE_ENV === 'test';
+
+const handleResetGameData = () => {
+  localStorage.removeItem(LOCAL_STORAGE_KEYS.HISTORY);
+  localStorage.removeItem(LOCAL_STORAGE_KEYS.WINS_LOSSES);
+};
+
 export {
   processTurn,
   processCpuTurn,
@@ -235,4 +238,6 @@ export {
   readWinsLosses,
   sleep,
   cpuSelectMove,
+  handleResetGameData,
+  isTesting,
 };

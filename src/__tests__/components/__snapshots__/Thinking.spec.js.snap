@@ -11,6 +11,7 @@ Object {
       >
         <div
           class="w-full h-52 w-52 relative"
+          data-testid="thinking-wrap"
         >
           <span
             class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-800 opacity-50"
@@ -138,6 +139,7 @@ Object {
     >
       <div
         class="w-full h-52 w-52 relative"
+        data-testid="thinking-wrap"
       >
         <span
           class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-800 opacity-50"

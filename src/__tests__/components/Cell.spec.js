@@ -20,7 +20,7 @@ describe('Bg', () => {
   it('triggers function when clicked', () => {
     render(<Cell {...mocks} />);
     fireEvent(
-      screen.getByTestId('cell-btn'),
+      screen.getByTestId('cell-btn-1'),
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -31,14 +31,14 @@ describe('Bg', () => {
 
   it('has no button if value is not null', () => {
     render(<Cell {...mocks} value={PLAYER} />);
-    const btn = screen.queryByTestId('cell-btn');
+    const btn = screen.queryByTestId('cell-btn-1');
     expect(btn).toBe(null);
   });
 
   it('triggers function when clicked', () => {
     render(<Cell {...mocks} result={{ side: 'player', winningPattern: 3 }} />);
     fireEvent(
-      screen.getByTestId('cell-btn'),
+      screen.getByTestId('cell-btn-1'),
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -46,6 +46,4 @@ describe('Bg', () => {
     );
     expect(mocks.handlePlayerSelectCell).toHaveBeenCalled();
   });
-
-  side: winningPattern: null;
 });

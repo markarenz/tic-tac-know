@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const Thinking = ({ aiLevel, isCpuThinking }) => {
   return (
     <TransitionWrap show={isCpuThinking} anim="zoomInOut">
-      <div className="w-full h-52 w-52 relative">
+      <div className="w-full h-52 w-52 relative" data-testid="thinking-wrap">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-800 opacity-50"></span>
         <div className="relative">
           <Cpu aiLevel={aiLevel} isThinking />

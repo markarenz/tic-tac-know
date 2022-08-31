@@ -10,6 +10,7 @@ import {
   storeGameResults,
   saveWinsLosses,
   readWinsLosses,
+  isTesting,
 } from '../helpers/gameLogic';
 import PropTypes from 'prop-types';
 
@@ -135,7 +136,6 @@ const Game = ({ aiLevel, goToMenu, playerSide }) => {
     setGameStatus('playing');
   };
   const gameState = { whoseTurn, sideLabels, gameBoard, gameStatus, turnHistory };
-
   return (
     <div data-testid="game-main">
       <Bg variant="game" />
@@ -158,45 +158,14 @@ const Game = ({ aiLevel, goToMenu, playerSide }) => {
           handleGoToMenu={goToMenu}
           aiLevel={aiLevel}
         />
+        {isTesting() && (
+          <div>
+            <button data-testid="game-test-playAgain" onClick={handlePlayAgain}>
+              gameOver
+            </button>
+          </div>
+        )}
       </div>
-      {process.env.NODE_ENV === 'test' && (
-        <div>
-          <button data-testid="test-btn-game-start" onClick={() => handleStartClick(CPU)}>
-            gameStart
-          </button>
-          <button data-testid="test-btn-play-again" onClick={handlePlayAgain}>
-            gameStart
-          </button>
-          <button data-testid="test-setGameStatus-playing" onClick={() => setGameStatus('playing')}>
-            gameStatusPlaying
-          </button>
-          <button
-            data-testid="test-setGameboard-player-win"
-            onClick={() => setGameBoard({ 2: PLAYER, 3: PLAYER })}
-          >
-            near-win-PLAYER
-          </button>
-          <button
-            data-testid="test-setGameboard-cpu-win"
-            onClick={() => setGameBoard({ 2: CPU, 3: CPU })}
-          >
-            near-win-CPU
-          </button>
-          <button
-            data-testid="test-handlePlayerSelectCell-1"
-            onClick={() => handlePlayerSelectCell(1)}
-          >
-            handlePlayerSelectCell(1)
-          </button>
-
-          <button
-            data-testid="test-set-game-result"
-            onClick={() => setGameResult({ side: PLAYER, winningPatter: 1 })}
-          >
-            gameComplete
-          </button>
-        </div>
-      )}
     </div>
   );
 };

@@ -91,7 +91,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-1"
                       disabled=""
                     >
                        
@@ -103,7 +103,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-2"
                       disabled=""
                     >
                        
@@ -115,7 +115,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-3"
                       disabled=""
                     >
                        
@@ -127,7 +127,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-4"
                       disabled=""
                     >
                        
@@ -139,7 +139,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-5"
                       disabled=""
                     >
                        
@@ -151,7 +151,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-6"
                       disabled=""
                     >
                        
@@ -163,7 +163,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-7"
                       disabled=""
                     >
                        
@@ -175,7 +175,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-8"
                       disabled=""
                     >
                        
@@ -187,7 +187,7 @@ Object {
                   >
                     <button
                       class="w-full h-full"
-                      data-testid="cell-btn"
+                      data-testid="cell-btn-9"
                       disabled=""
                     >
                        
@@ -280,43 +280,13 @@ Object {
                 </div>
               </div>
               <div />
-            </div>
-            <div>
-              <button
-                data-testid="test-btn-game-start"
-              >
-                gameStart
-              </button>
-              <button
-                data-testid="test-btn-play-again"
-              >
-                gameStart
-              </button>
-              <button
-                data-testid="test-setGameStatus-playing"
-              >
-                gameStatusPlaying
-              </button>
-              <button
-                data-testid="test-setGameboard-player-win"
-              >
-                near-win-PLAYER
-              </button>
-              <button
-                data-testid="test-setGameboard-cpu-win"
-              >
-                near-win-CPU
-              </button>
-              <button
-                data-testid="test-handlePlayerSelectCell-1"
-              >
-                handlePlayerSelectCell(1)
-              </button>
-              <button
-                data-testid="test-set-game-result"
-              >
-                gameComplete
-              </button>
+              <div>
+                <button
+                  data-testid="game-test-playAgain"
+                >
+                  gameOver
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -432,7 +402,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-1"
                     disabled=""
                   >
                      
@@ -444,7 +414,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-2"
                     disabled=""
                   >
                      
@@ -456,7 +426,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-3"
                     disabled=""
                   >
                      
@@ -468,7 +438,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-4"
                     disabled=""
                   >
                      
@@ -480,7 +450,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-5"
                     disabled=""
                   >
                      
@@ -492,7 +462,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-6"
                     disabled=""
                   >
                      
@@ -504,7 +474,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-7"
                     disabled=""
                   >
                      
@@ -516,7 +486,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-8"
                     disabled=""
                   >
                      
@@ -528,7 +498,7 @@ Object {
                 >
                   <button
                     class="w-full h-full"
-                    data-testid="cell-btn"
+                    data-testid="cell-btn-9"
                     disabled=""
                   >
                      
@@ -621,43 +591,13 @@ Object {
               </div>
             </div>
             <div />
-          </div>
-          <div>
-            <button
-              data-testid="test-btn-game-start"
-            >
-              gameStart
-            </button>
-            <button
-              data-testid="test-btn-play-again"
-            >
-              gameStart
-            </button>
-            <button
-              data-testid="test-setGameStatus-playing"
-            >
-              gameStatusPlaying
-            </button>
-            <button
-              data-testid="test-setGameboard-player-win"
-            >
-              near-win-PLAYER
-            </button>
-            <button
-              data-testid="test-setGameboard-cpu-win"
-            >
-              near-win-CPU
-            </button>
-            <button
-              data-testid="test-handlePlayerSelectCell-1"
-            >
-              handlePlayerSelectCell(1)
-            </button>
-            <button
-              data-testid="test-set-game-result"
-            >
-              gameComplete
-            </button>
+            <div>
+              <button
+                data-testid="game-test-playAgain"
+              >
+                gameOver
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -992,28 +932,6 @@ Object {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <button
-                    data-testid="test-handleResetCancel"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickPrev"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickNext"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleResetConfirmClick"
-                  >
-                    test
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1291,28 +1209,6 @@ Object {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div>
-                <button
-                  data-testid="test-handleResetCancel"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickPrev"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickNext"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleResetConfirmClick"
-                >
-                  test
-                </button>
               </div>
             </div>
           </div>
@@ -1649,28 +1545,6 @@ Object {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <button
-                    data-testid="test-handleResetCancel"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickPrev"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickNext"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleResetConfirmClick"
-                  >
-                    test
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -1948,28 +1822,6 @@ Object {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div>
-                <button
-                  data-testid="test-handleResetCancel"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickPrev"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickNext"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleResetConfirmClick"
-                >
-                  test
-                </button>
               </div>
             </div>
           </div>
@@ -2306,28 +2158,6 @@ Object {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <button
-                    data-testid="test-handleResetCancel"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickPrev"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickNext"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleResetConfirmClick"
-                  >
-                    test
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -2605,28 +2435,6 @@ Object {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div>
-                <button
-                  data-testid="test-handleResetCancel"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickPrev"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickNext"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleResetConfirmClick"
-                >
-                  test
-                </button>
               </div>
             </div>
           </div>
@@ -2963,28 +2771,6 @@ Object {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <button
-                    data-testid="test-handleResetCancel"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickPrev"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleClickNext"
-                  >
-                    test
-                  </button>
-                  <button
-                    data-testid="test-handleResetConfirmClick"
-                  >
-                    test
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -3262,28 +3048,6 @@ Object {
                     </button>
                   </div>
                 </div>
-              </div>
-              <div>
-                <button
-                  data-testid="test-handleResetCancel"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickPrev"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleClickNext"
-                >
-                  test
-                </button>
-                <button
-                  data-testid="test-handleResetConfirmClick"
-                >
-                  test
-                </button>
               </div>
             </div>
           </div>

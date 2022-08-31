@@ -4,6 +4,7 @@ import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import Game from '../../components/Game';
 import { AI_LEVELS, X } from '../../constants';
 import { act } from 'react-dom/test-utils';
+import { sleep } from '../../helpers/gameLogic';
 
 beforeEach(() => {
   mockRandom(0);
@@ -22,138 +23,69 @@ describe('Game', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('renders result: gameStart', async () => {
+  it('renders renders with clicks', async () => {
+    mockRandom(0.5);
     const container = render(
       <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
     );
-    await act(async () => {
-      fireEvent(
-        screen.getByTestId('test-btn-game-start'),
-        new MouseEvent('click', {
-          bubbles: true,
-          cancelable: true,
-        })
-      );
+
+    let btnId = 'gameStart-btn-start';
+    await waitFor(() => expect(screen.getByTestId(btnId)).not.toBeDisabled(), {
+      timeout: 2000,
     });
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    await waitFor(() => {
-      expect(container).toMatchSnapshot();
+    fireEvent(
+      screen.getByTestId(btnId),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    btnId = 'cell-btn-1';
+    await waitFor(() => expect(screen.getByTestId(btnId)).not.toBeDisabled(), {
+      timeout: 2000,
     });
+    await screen.findByTestId(btnId);
+    fireEvent(
+      screen.getByTestId(btnId),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    btnId = 'cell-btn-4';
+    await waitFor(() => expect(screen.getByTestId(btnId)).not.toBeDisabled(), {
+      timeout: 2000,
+    });
+    expect(container).toMatchSnapshot();
   });
 
-  // it('renders game play PLAYER WIN', async () => {
-  //   // jest.useFakeTimers();
-  //   const container = render(
-  //     <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
-  //   );
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-setGameStatus-playing'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-setGameboard-player-win'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-handlePlayerSelectCell-1'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-set-game-result'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   // jest.runAllTimers();
-  //   await new Promise((resolve) => setTimeout(resolve, 0));
-  //   await waitFor(() => {
-  //     expect(screen.getByTestId('game-main')).toBeTruthy();
-  //   });
-  // });
+  it('renders renders with playAgain', async () => {
+    const container = render(
+      <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
+    );
 
-  // it('renders game play CPU WIN', async () => {
-  //   // jest.useFakeTimers();
-  //   const container = render(
-  //     <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
-  //   );
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-setGameStatus-playing'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-setGameboard-cpu-win'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-handlePlayerSelectCell-1'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-set-game-result'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   // jest.runAllTimers();
-  //   await new Promise((resolve) => setTimeout(resolve, 0));
-  //   await waitFor(() => {
-  //     expect(screen.getByTestId('game-main')).toBeTruthy();
-  //   });
-  // });
-
-  // it('renders result: playAgain', async () => {
-  //   const container = render(
-  //     <Game aiLevel={mocks.aiLevel} goToMenu={mocks.goToMenu} playerSide={mocks.playerSide} />
-  //   );
-
-  //   await act(async () => {
-  //     fireEvent(
-  //       screen.getByTestId('test-btn-play-again'),
-  //       new MouseEvent('click', {
-  //         bubbles: true,
-  //         cancelable: true,
-  //       })
-  //     );
-  //   });
-  //   await new Promise((resolve) => setTimeout(resolve, 0));
-  //   await waitFor(() => {
-  //     expect(screen.getByTestId('game-main')).toBeTruthy();
-  //   });
-  // });
+    let btnId = 'gameStart-btn-start';
+    await waitFor(() => expect(screen.getByTestId(btnId)).not.toBeDisabled(), {
+      timeout: 2000,
+    });
+    fireEvent(
+      screen.getByTestId(btnId),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    btnId = 'game-test-playAgain';
+    await screen.findByTestId(btnId);
+    // jest.useFakeTimers();
+    fireEvent(
+      screen.getByTestId(btnId),
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+    // jest.runAllTimers();
+    expect(container).toMatchSnapshot();
+  });
 });

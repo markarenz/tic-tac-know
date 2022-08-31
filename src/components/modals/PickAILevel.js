@@ -46,7 +46,7 @@ const PickAiLevel = ({ show, handleSelectAiLevel, handleClickPrev, goToGame, aiL
         <div className="text-white italic text-xl pt-1 leading-tight">
           {aiLevelMessages[aiLevel]}
         </div>
-        <MenuNav handleClickPrev={handleClickPrev} handleClickNext={goToGame} />
+        <MenuNav handleClickPrev={handleClickPrev} handleClickNext={goToGame} mode="pickAiLevel" />
       </div>
     </TransitionWrap>
   );
