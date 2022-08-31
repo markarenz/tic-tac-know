@@ -30,6 +30,6 @@ training the CPU is almost unbeatable.
 
 ## Runing & Testing
 
-Run the game: `npm run start`
-
-Run the tests: `npm run test`
+- Install the dependencies: `npm i`
+- Run the game: `npm run start`
+- Run the tests: `npm run test`
