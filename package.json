@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tailwindui/react": "^0.1.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -41,7 +40,8 @@
     "jest-mock-random": "^1.1.1",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.1.8",
+    "@tailwindui/react": "^0.1.1"
   },
   "jest": {
     "testMatch": [
